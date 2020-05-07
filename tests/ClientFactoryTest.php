@@ -32,7 +32,7 @@ class ClientFactoryTest extends TestCase
     {
         $apiToken = 'abc';
         $config = [
-            'api_token' => $apiToken,
+            'api_token'  => $apiToken,
             'token_type' => 'server',
         ];
 
@@ -40,14 +40,14 @@ class ClientFactoryTest extends TestCase
 
         $headerConfig = $client->getConfig('headers');
 
-        $this->assertEquals($headerConfig['Authorization'], 'Token ' . $apiToken);
+        $this->assertEquals($headerConfig['Authorization'], 'Token '.$apiToken);
     }
 
     public function test_when_token_type_is_client()
     {
         $apiToken = 'abc';
         $config = [
-            'api_token' => $apiToken,
+            'api_token'  => $apiToken,
             'token_type' => 'client',
         ];
 
@@ -55,14 +55,14 @@ class ClientFactoryTest extends TestCase
 
         $headerConfig = $client->getConfig('headers');
 
-        $this->assertEquals($headerConfig['Authorization'], 'Token ' . $apiToken);
+        $this->assertEquals($headerConfig['Authorization'], 'Token '.$apiToken);
     }
 
     public function test_when_token_type_is_user_access()
     {
         $apiToken = 'abc';
         $config = [
-            'api_token' => $apiToken,
+            'api_token'  => $apiToken,
             'token_type' => 'user_access',
         ];
 
@@ -70,6 +70,6 @@ class ClientFactoryTest extends TestCase
 
         $headerConfig = $client->getConfig('headers');
 
-        $this->assertEquals($headerConfig['Authorization'], 'Bearer ' . $apiToken);
+        $this->assertEquals($headerConfig['Authorization'], 'Bearer '.$apiToken);
     }
 }

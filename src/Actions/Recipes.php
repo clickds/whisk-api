@@ -12,7 +12,7 @@ trait Recipes
     public function getRecipe($id)
     {
         if (filter_var($id, FILTER_VALIDATE_URL)) {
-            $uri = '?id=' . $id;
+            $uri = '?id='.$id;
         } else {
             $uri = $id;
         }

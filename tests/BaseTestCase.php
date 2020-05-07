@@ -9,7 +9,7 @@ class BaseTestCase extends TestCase
 {
     public function setUp(): void
     {
-        if (file_exists(getcwd() . '/.env')) {
+        if (file_exists(getcwd().'/.env')) {
             $dotenv = Dotenv::createImmutable(getcwd());
             $dotenv->load();
         }
@@ -18,7 +18,8 @@ class BaseTestCase extends TestCase
 
     public function getSupportJson(string $path): string
     {
-        $path = getcwd() . '/tests/Support/Json/' . $path;
+        $path = getcwd().'/tests/Support/Json/'.$path;
+
         return file_get_contents($path);
     }
 }

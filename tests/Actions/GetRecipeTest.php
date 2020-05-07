@@ -2,14 +2,13 @@
 
 namespace ClickDs\WhiskApi\Tests\Actions;
 
+use ClickDs\WhiskApi\Tests\BaseTestCase;
 use ClickDs\WhiskApi\Tests\Support\MockResponses;
+use ClickDs\WhiskApi\Tests\Support\SandboxClient;
 use ClickDs\WhiskApi\WhiskApi;
-use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
 use Mockery;
-use ClickDs\WhiskApi\Tests\BaseTestCase;
-use ClickDs\WhiskApi\Tests\Support\SandboxClient;
 
 class GetRecipeTest extends BaseTestCase
 {
@@ -34,9 +33,9 @@ class GetRecipeTest extends BaseTestCase
         $response = $client->getRecipe($recipeId);
 
         $this->assertNotEmpty($response);
-        $this->assertEquals("101dc8b84c1ddcbc77adb29e9f17b56fe2512d71d5f", $response['id']);
-        $this->assertEquals("Salmon with crunchy, quick-pickled fennel salad", $response['name']);
-        $this->assertEquals("This fresh and healthy salmon recipe that takes 20 minutes from start to finish.", $response['description']);
+        $this->assertEquals('101dc8b84c1ddcbc77adb29e9f17b56fe2512d71d5f', $response['id']);
+        $this->assertEquals('Salmon with crunchy, quick-pickled fennel salad', $response['name']);
+        $this->assertEquals('This fresh and healthy salmon recipe that takes 20 minutes from start to finish.', $response['description']);
     }
 
     public function test_it_returns_the_content(): void
@@ -55,7 +54,7 @@ class GetRecipeTest extends BaseTestCase
     public function test_guzzle_hits_the_correct_url_when_passed_id(): void
     {
         $id = '9773cb7eca5d11e7ae7e42010a9a0035';
-        $uri = '/v1/' . $id;
+        $uri = '/v1/'.$id;
         $mock = Mockery::mock(Client::class);
         $mock->shouldReceive('request')->once()->with('GET', $uri, [])->andReturn(new Response());
         $client = new WhiskApi($mock);
@@ -68,7 +67,7 @@ class GetRecipeTest extends BaseTestCase
     public function test_guzzle_hits_the_correct_url_when_passed_url_as_id(): void
     {
         $id = 'https://www.whisk.com/api/9773cb7eca5d11e7ae7e42010a9a0035';
-        $uri = '/v1/?id=' . $id;
+        $uri = '/v1/?id='.$id;
         $mock = Mockery::mock(Client::class);
         $mock->shouldReceive('request')->once()->with('GET', $uri, [])->andReturn(new Response());
         $client = new WhiskApi($mock);

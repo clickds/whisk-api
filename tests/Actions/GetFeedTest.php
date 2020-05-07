@@ -2,11 +2,10 @@
 
 namespace ClickDs\WhiskApi\Tests\Actions;
 
-use ClickDs\WhiskApi\WhiskApi;
 use ClickDs\WhiskApi\Tests\BaseTestCase;
 use ClickDs\WhiskApi\Tests\Support\MockResponses;
 use ClickDs\WhiskApi\Tests\Support\SandboxClient;
-use Exception;
+use ClickDs\WhiskApi\WhiskApi;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
 use Mockery;
