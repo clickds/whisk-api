@@ -23,7 +23,6 @@ class SearchRecipesTest extends BaseTestCase
             'q' => 'salad'
         ]);
 
-        var_dump($response);
         $this->assertNotEmpty($response);
     }
 }

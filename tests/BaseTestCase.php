@@ -9,8 +9,10 @@ class BaseTestCase extends TestCase
 {
     public function setUp(): void
     {
-        $dotenv = Dotenv::createImmutable(getcwd());
-        $dotenv->load();
+        if (file_exists(getcwd() . '/.env')) {
+            $dotenv = Dotenv::createImmutable(getcwd());
+            $dotenv->load();
+        }
         parent::setUp();
     }
 
