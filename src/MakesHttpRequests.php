@@ -7,9 +7,15 @@ trait MakesHttpRequests
     /**
      * @return mixed
      */
-    public function get(string $uri)
+    public function get(string $uri, array $queryParameters = [])
     {
-        return $this->request('GET', $uri);
+        $uri = '/' . $this->getVersion() . '/' . $uri;
+        $payload = [];
+        if (!empty($queryParameters)) {
+            $payload['query'] = $queryParameters;
+        }
+
+        return $this->request('GET', $uri, $payload);
     }
 
     /**
@@ -17,8 +23,7 @@ trait MakesHttpRequests
      */
     private function request(string $verb, string $uri, array $payload = [])
     {
-        $requestPayload = empty($payload) ? [] : ['form_params' => $payload];
-        $response = $this->getHttpClient()->request($verb, $uri, $requestPayload);
+        $response = $this->getHttpClient()->request($verb, $uri, $payload);
         $responseBody = (string) $response->getBody();
 
         return json_decode($responseBody, true);

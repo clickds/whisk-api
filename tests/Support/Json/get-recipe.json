@@ -1,0 +1,447 @@
+{
+  "id": "9773cb7eca5d11e7ae7e42010a9a0035",
+  "name": "Omelette pancakes with tomato & pepper sauce",
+  "description": "Healthy, low-calorie and gluten-free - these herby egg 'pancakes' will become your go-to favourite for a quick midweek meal",
+  "ingredients": [
+    {
+      "text": "4 large eggs"
+    },
+    {
+      "text": "handful basil leaves"
+    },
+    {
+      "text": "2 tsp rapeseed oil, plus a little extra for the pancakes"
+    },
+    {
+      "text": "1 yellow pepper, quartered, deseeded and thinly sliced"
+    },
+    {
+      "text": "2 garlic cloves, thinly sliced"
+    },
+    {
+      "text": "1 tbsp cider vinegar"
+    },
+    {
+      "text": "400g can chopped tomatoes"
+    },
+    {
+      "text": "wholemeal bread or salad leaves, to serve"
+    }
+  ],
+  "images": [
+    {
+      "url": "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/omelette-pancakes-with-tomato-pepper-sauce.jpg",
+      "responsive": {
+        "url": "https://lh3.googleusercontent.com/Fw3mfAzXomFv3iU-PO8ASPuvDN0AA6U8DlTXn6GkwUbJrq6IcGC8ZCzdnzZyZbqUsoxSR4fv3LVk3HuM8xURFq7qfQ8",
+        "width": 500,
+        "height": 454
+      }
+    }
+  ],
+  "source": {
+    "name": "bbcgoodfood.com",
+    "displayName": "BBC Good Food",
+    "sourceRecipeUrl": "https://www.bbcgoodfood.com/recipes/omelette-pancakes-tomato-pepper-sauce",
+    "license": "Fairuse",
+    "image": {
+      "url": "https://res.cloudinary.com/whisk/image/upload/v1401879186/content/publisher_logos/foodnetwork-logo.png",
+      "responsive": {
+        "url": "https://res.cloudinary.com/whisk/image/upload/v1401879186/content/publisher_logos/foodnetwork-logo.png",
+        "width": 200,
+        "height": 200
+      }
+    }
+  },
+  "author": {
+    "name": "Author name",
+    "image": {
+      "url": "https://whisk-res.cloudinary.com/image/upload/v1523894700/custom_upload/ba4d7363cd46c736675d2cc08754f5bc.png",
+      "responsive": {
+        "url": "https://whisk-res.cloudinary.com/image/upload/v1523894700/custom_upload/ba4d7363cd46c736675d2cc08754f5bc.png",
+        "width": 800,
+        "height": 800
+      }
+    }
+  },
+  "numberOfServings": 2,
+  "durations": {
+    "cookTime": 20,
+    "prepTime": 10,
+    "totalTime": 30
+  },
+  "instructions": {
+    "steps": [
+      {
+        "text": "First make the sauce. Heat the oil in a large frying pan, and fry the pepper and garlic for 5 mins to soften them. Spoon in the cider vinegar and allow to sizzle away. Tip in the tomatoes, then measure in a third of a can of water. Cover and leave to simmer for 10-15 mins until the peppers are tender and the sauce is thick.",
+        "images": []
+      },
+      {
+        "text": "Meanwhile, make the pancakes. Beat 1 egg with 1 tsp water and seasoning, then heat a small non-stick frying pan with a tiny amount of oil. Add the egg mixture and cook for 1-2 mins until set into a thin pancake. Lift onto a plate, cover with foil and repeat with the other eggs. Roll up onto warm plates, spoon over the sauce and scatter with the basil. Serve with bread or a salad on the side.",
+        "images": []
+      }
+    ]
+  },
+  "normalizedIngredients": [
+    {
+      "text": "4 eggs",
+      "analysis": {
+        "product": "eggs",
+        "canonicalName": "EGG",
+        "quantity": 4,
+        "category": "DAIRY AND EGGS"
+      },
+      "sourceText": "4 large eggs"
+    },
+    {
+      "text": "handful basil leaves",
+      "analysis": {
+        "product": "basil leaves",
+        "canonicalName": "BASIL LEAF",
+        "unit": "handful",
+        "category": "FRUITS AND VEGETABLES"
+      },
+      "sourceText": "handful basil leaves"
+    },
+    {
+      "text": "2 tsp rapeseed oil",
+      "analysis": {
+        "product": "rapeseed oil",
+        "canonicalName": "RAPESEED OIL",
+        "quantity": 2,
+        "unit": "tsp",
+        "category": "CONDIMENTS"
+      },
+      "sourceText": "2 tsp rapeseed oil, plus a little extra for the pancakes"
+    },
+    {
+      "text": "1 yellow pepper",
+      "analysis": {
+        "product": "yellow pepper",
+        "canonicalName": "YELLOW CAPSICUM",
+        "quantity": 1,
+        "category": "FRUITS AND VEGETABLES"
+      },
+      "sourceText": "1 yellow pepper, quartered, deseeded and thinly sliced"
+    },
+    {
+      "text": "2 garlic cloves",
+      "analysis": {
+        "product": "garlic cloves",
+        "canonicalName": "GARLIC CLOVE",
+        "quantity": 2,
+        "category": "FRUITS AND VEGETABLES"
+      },
+      "sourceText": "2 garlic cloves, thinly sliced"
+    },
+    {
+      "text": "1 tbsp cider vinegar",
+      "analysis": {
+        "product": "cider vinegar",
+        "canonicalName": "CIDER VINEGAR",
+        "quantity": 1,
+        "unit": "tbsp",
+        "category": "CONDIMENTS"
+      },
+      "sourceText": "1 tbsp cider vinegar"
+    },
+    {
+      "text": "400 g can chopped tomatoes",
+      "analysis": {
+        "product": "can chopped tomatoes",
+        "canonicalName": "CANNED CHOPPED TOMATO",
+        "quantity": 400,
+        "unit": "g",
+        "category": "CANNED FOODS"
+      },
+      "sourceText": "400g can chopped tomatoes"
+    },
+    {
+      "text": "wholemeal bread",
+      "analysis": {
+        "product": "wholemeal bread",
+        "canonicalName": "WHOLEMEAL BREAD",
+        "category": "BREAD AND BAKERY"
+      },
+      "sourceText": "wholemeal bread or salad leaves, to serve"
+    }
+  ],
+  "nutrition": {
+    "status": "Available",
+    "total": [
+      {
+        "label": "Vitamin B6",
+        "code": "VITB6A",
+        "value": 0.659,
+        "unit": "Mg"
+      },
+      {
+        "label": "Vitamin E",
+        "code": "TOCPHA",
+        "value": 3.974,
+        "unit": "Mg"
+      },
+      {
+        "label": "Trans Fat",
+        "code": "FATRN",
+        "value": 0.103,
+        "unit": "G"
+      },
+      {
+        "label": "Vitamin A",
+        "code": "VITA_RAE",
+        "value": 1004.472,
+        "unit": "Mkg"
+      },
+      {
+        "label": "Sugars",
+        "code": "SUGAR",
+        "value": 16.904,
+        "unit": "G"
+      },
+      {
+        "label": "Sodium",
+        "code": "NA",
+        "value": 1311.748,
+        "unit": "Mg"
+      },
+      {
+        "label": "Cholesterol",
+        "code": "CHOLE",
+        "value": 654.72,
+        "unit": "Mg"
+      },
+      {
+        "label": "Protein",
+        "code": "PROCNT",
+        "value": 27.209,
+        "unit": "G"
+      },
+      {
+        "label": "Folic Acid B9",
+        "code": "FOL",
+        "value": 102.96,
+        "unit": "Mkg"
+      },
+      {
+        "label": "Zinc",
+        "code": "Zn",
+        "value": 2.598,
+        "unit": "Mg"
+      },
+      {
+        "label": "Vitamin K",
+        "code": "VITK1",
+        "value": 65.686,
+        "unit": "Mkg"
+      },
+      {
+        "label": "Thiamin B1",
+        "code": "THIA",
+        "value": 0.15400000000000003,
+        "unit": "Mg"
+      },
+      {
+        "label": "Vitamin C",
+        "code": "VITC",
+        "value": 129.308,
+        "unit": "Mg"
+      },
+      {
+        "label": "Niacin B3",
+        "code": "NIA",
+        "value": 0.853,
+        "unit": "Mg"
+      },
+      {
+        "label": "Phosphorus",
+        "code": "P",
+        "value": 389.39200000000005,
+        "unit": "Mg"
+      },
+      {
+        "label": "Iron",
+        "code": "Fe",
+        "value": 7.557,
+        "unit": "Mg"
+      },
+      {
+        "label": "Vitamin D",
+        "code": "VITD",
+        "value": 3.608,
+        "unit": "Mkg"
+      },
+      {
+        "label": "Magnesium",
+        "code": "MG",
+        "value": 42.958000000000006,
+        "unit": "Mg"
+      },
+      {
+        "label": "Polyunsaturated Fat",
+        "code": "FAPU",
+        "value": 6.053999999999999,
+        "unit": "G"
+      },
+      {
+        "label": "Vitamin B12",
+        "code": "VITB12",
+        "value": 1.566,
+        "unit": "Mkg"
+      },
+      {
+        "label": "Fiber",
+        "code": "FIBTG",
+        "value": 9.141,
+        "unit": "G"
+      },
+      {
+        "label": "Energy",
+        "code": "ENERC_KCAL",
+        "value": 486.629,
+        "unit": "Kcal"
+      },
+      {
+        "label": "Monounsaturated Fat",
+        "code": "FAMS",
+        "value": 12.204999999999998,
+        "unit": "G"
+      },
+      {
+        "label": "Potassium",
+        "code": "K",
+        "value": 1481.65,
+        "unit": "Mg"
+      },
+      {
+        "label": "Calcium",
+        "code": "CA",
+        "value": 143.621,
+        "unit": "Mg"
+      },
+      {
+        "label": "Total Fat",
+        "code": "FAT",
+        "value": 26.127000000000006,
+        "unit": "G"
+      },
+      {
+        "label": "Carbohydrate Total",
+        "code": "CHOCDF",
+        "value": 32.392,
+        "unit": "G"
+      },
+      {
+        "label": "Saturated Fat",
+        "code": "FASAT",
+        "value": 6.25,
+        "unit": "G"
+      }
+    ],
+    "labels": [
+      {
+        "name": "source-of-vitamin-a",
+        "displayName": "Source Of Vitamin A"
+      },
+      {
+        "name": "low-sugars",
+        "displayName": "Low Sugars"
+      },
+      {
+        "name": "source-of-protein",
+        "displayName": "Source Of Protein"
+      },
+      {
+        "name": "high-protein",
+        "displayName": "High Protein"
+      },
+      {
+        "name": "source-of-vitamin-c",
+        "displayName": "Source Of Vitamin C"
+      },
+      {
+        "name": "high-monounsaturated-fat",
+        "displayName": "High Monounsaturated Fat"
+      },
+      {
+        "name": "low-saturated-fat",
+        "displayName": "Low Saturated Fat"
+      }
+    ],
+    "healthScore": {
+      "value": 5.268321569830008,
+      "nutrientsInfluence": [
+        {
+          "code": "FAT_UNSAT",
+          "influence": 0.7392201843132631,
+          "comment": "Medium positive impact"
+        },
+        {
+          "code": "FATRN",
+          "influence": -0.10175971996989651,
+          "comment": "Insignificant impact"
+        },
+        {
+          "code": "VITA_RAE",
+          "influence": 0.4412948887657591,
+          "comment": "Medium positive impact"
+        },
+        {
+          "code": "SUGAR",
+          "influence": -0.1766434534398728,
+          "comment": "Low negative impact"
+        },
+        "..."
+      ]
+    }
+  },
+  "labels": {
+    "mealType": [
+      {
+        "name": "lunch",
+        "displayName": "Lunch"
+      },
+      {
+        "name": "main-course",
+        "displayName": "Main Course"
+      },
+      {
+        "name": "dinner",
+        "displayName": "Dinner"
+      }
+    ],
+    "cuisine": [
+      {
+        "name": "french",
+        "displayName": "French"
+      }
+    ],
+    "category": [
+      {
+        "name": "dinner",
+        "displayName": "Dinner"
+      },
+      {
+        "name": "healthy-recipes",
+        "displayName": "Healthy Recipes"
+      },
+      {
+        "name": "quick-and-easy",
+        "displayName": "Quick and easy"
+      },
+      {
+        "name": "lunch",
+        "displayName": "Lunch"
+      },
+      {
+        "name": "main-dishes",
+        "displayName": "Main Dishes"
+      }
+    ]
+  },
+  "constraints": {
+    "violates": {
+      "diets": ["lacto-vegetarian", "vegetarian", "vegan"],
+      "avoidances": ["egg", "wheat"]
+    }
+  }
+}

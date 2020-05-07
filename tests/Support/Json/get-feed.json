@@ -1,0 +1,123 @@
+{
+  "id": "301d1456411e4082af0e37d12ef5ec49",
+  "feed": [
+    {
+      "type": "group",
+      "key": {
+        "id": "category::appetizers-and-snacks"
+      },
+      "display": {
+        "displayName": "Appetizers and Snacks",
+        "images": [
+          {
+            "url": "https://whisk-res.cloudinary.com/image/upload/v1524060217/graph/categories/world/Appetizers_and_Snacks.jpg",
+            "responsive": {
+              "url": "https://whisk-res.cloudinary.com/image/upload/v1524060217/graph/categories/world/Appetizers_and_Snacks.jpg",
+              "width": 800,
+              "height": 800
+            }
+          }
+        ]
+      },
+      "content": {
+        "id": "appetizers-and-snacks",
+        "displayName": "Appetizers and Snacks",
+        "groupType": "category"
+      },
+      "filterKey": "category::appetizers-and-snacks"
+    },
+    {
+      "type": "link",
+      "key": {
+        "id": "link::16eba08da247483db6437f8391e0fd48"
+      },
+      "display": {
+        "displayName": "Check out a smart Whisk platform.",
+        "images": [
+          {
+            "url": "https://whisk-res.cloudinary.com/image/upload/v1526474016/custom_upload/abfa740e034f71b60a769dcdbad22a68.jpg",
+            "responsive": {
+              "url": "https://whisk-res.cloudinary.com/image/upload/v1526474016/custom_upload/abfa740e034f71b60a769dcdbad22a68.jpg",
+              "width": 1042,
+              "height": 938
+            }
+          }
+        ],
+        "tag": {
+          "name": "partners",
+          "displayName": "Partners"
+        }
+      },
+      "content": {
+        "id": "16eba08da247483db6437f8391e0fd48",
+        "displayText": "Check out a smart Whisk platform.",
+        "url": "https://recipes.whisk.com/feed"
+      }
+    },
+    {
+      "type": "recipe",
+      "key": {
+        "id": "recipe::9847a3d1ca5d11e7ae7e42010a9a0035"
+      },
+      "display": {
+        "displayName": "Chorizo, caper & rocket pizza",
+        "images": [
+          {
+            "url": "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--690472_11.jpg",
+            "responsive": {
+              "url": "https://whisk-res.cloudinary.com/image/upload/v1523013475/recipe/150a727245ce61a1844d1039820286bb.jpg",
+              "width": 500,
+              "height": 454
+            }
+          }
+        ],
+        "tag": {
+          "name": "easyDinners",
+          "displayName": "Easy Dinner",
+          "image": {
+            "url": "https://whisk-res.cloudinary.com/image/upload/v1523894700/custom_upload/ba4d7363cd46c736675d2cc08754f5bc.png",
+            "width": 800,
+            "height": 800
+          }
+        }
+      },
+      "content": {
+        "id": "9847a3d1ca5d11e7ae7e42010a9a0035",
+        "name": "Chorizo, caper & rocket pizza",
+        "description": "Capers, rocket and chorizo give this quick pizza a punchy flavour",
+        "author": {
+          "name": "Good Food"
+        },
+        "images": [
+          {
+            "url": "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--690472_11.jpg",
+            "responsive": {
+              "url": "https://whisk-res.cloudinary.com/image/upload/v1523013475/recipe/150a727245ce61a1844d1039820286bb.jpg",
+              "width": 500,
+              "height": 454
+            }
+          }
+        ],
+        "source": {
+          "name": "bbcgoodfood.com",
+          "displayName": "BBC Good Food",
+          "sourceRecipeUrl": "https://www.bbcgoodfood.com/recipes/1506638/chorizo-caper-and-rocket-pizza",
+          "license": "Fairuse",
+          "image": {
+            "url": "https://whisk-res.cloudinary.com/image/upload/publishers/logos/bbcgoodfood-logo.png",
+            "responsive": {
+              "url": "https://whisk-res.cloudinary.com/image/upload/publishers/logos/bbcgoodfood-logo.png",
+              "width": 256,
+              "height": 256
+            }
+          }
+        }
+      }
+    }
+  ],
+  "paging": {
+    "cursors": {
+      "after": "eyJwYWdlSWQiOiJiNjY4YWJmYy0xNzMzLTQ0MjQtYjBjMS03ZjJlMzIxNjU4YTgiLCJwcmV2aW91c0lkIjoiMjEwNzBlNTYtNDQ5Yy00Nzc5LTg0NjgtOTJjNzM3YzkxNDMxIiwibmV4dElkIjpudWxsfQ=="
+    }
+  }
+}
