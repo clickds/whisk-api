@@ -14,10 +14,10 @@ class WhiskApi
     use Feed;
 
     private const DEFAULT_GUZZLE_CONFIG = [
-        'base_uri' => 'https://graph.whisk.com',
+        'base_uri'    => 'https://graph.whisk.com',
         'http_errors' => false,
-        'headers' => [
-            'Accept' => 'application/json',
+        'headers'     => [
+            'Accept'       => 'application/json',
             'Content-Type' => 'application/json',
         ],
     ];
@@ -50,7 +50,7 @@ class WhiskApi
 
     /**
      * @param array<string> $configuration
-     * @param array<mixed> $guzzleConfig
+     * @param array<mixed>  $guzzleConfig
      */
     public static function createClient(array $configuration, array $guzzleConfig = []): HttpClient
     {

@@ -11,6 +11,7 @@ trait MockResponses
     private function createHandlerStack(array $responses): HandlerStack
     {
         $mock = new MockHandler($responses);
+
         return HandlerStack::create($mock);
     }
 
@@ -18,13 +19,14 @@ trait MockResponses
     {
         $handler = $this->createHandlerStack($responses);
         $config = [
-            'api_token' => 'abc',
+            'api_token'  => 'abc',
             'token_type' => $tokenType,
         ];
         $guzzleConfig = [
             'handler' => $handler,
         ];
         $client = WhiskApi::createClient($config, $guzzleConfig);
+
         return new WhiskApi($client);
     }
 }

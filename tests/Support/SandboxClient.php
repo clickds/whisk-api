@@ -10,8 +10,8 @@ trait SandboxClient
     {
         $config = [
             'headers' => [
-                'Authorization' => 'Token ' . $apiKey,
-            ]
+                'Authorization' => 'Token '.$apiKey,
+            ],
         ];
 
         return $this->createGuzzleSandboxClient($config);
@@ -20,10 +20,10 @@ trait SandboxClient
     public function createGuzzleSandboxClient(array $config = [])
     {
         $defaults = [
-            'base_uri' => 'https://testkitchen.whisk.com',
+            'base_uri'    => 'https://testkitchen.whisk.com',
             'http_errors' => false,
-            'headers' => [
-                'Accept' => 'application/json',
+            'headers'     => [
+                'Accept'       => 'application/json',
                 'Content-Type' => 'application/json',
             ],
         ];

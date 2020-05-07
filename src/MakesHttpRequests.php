@@ -9,7 +9,7 @@ trait MakesHttpRequests
      */
     public function get(string $uri, array $queryParameters = [])
     {
-        $uri = '/' . $this->getVersion() . '/' . $uri;
+        $uri = '/'.$this->getVersion().'/'.$uri;
         $payload = [];
         if (!empty($queryParameters)) {
             $payload['query'] = $queryParameters;

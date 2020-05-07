@@ -2,9 +2,9 @@
 
 namespace ClickDs\WhiskApi\Tests\Actions;
 
-use ClickDs\WhiskApi\WhiskApi;
 use ClickDs\WhiskApi\Tests\BaseTestCase;
 use ClickDs\WhiskApi\Tests\Support\SandboxClient;
+use ClickDs\WhiskApi\WhiskApi;
 
 class SearchRecipesTest extends BaseTestCase
 {
@@ -20,7 +20,7 @@ class SearchRecipesTest extends BaseTestCase
         $client = new WhiskApi($httpClient);
 
         $response = $client->searchRecipes([
-            'q' => 'salad'
+            'q' => 'salad',
         ]);
 
         $this->assertNotEmpty($response);
