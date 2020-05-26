@@ -2,8 +2,8 @@
 
 namespace ClickDs\WhiskApi;
 
-use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 use Illuminate\Support\Arr;
+use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
 class ServiceProvider extends LaravelServiceProvider
 {
