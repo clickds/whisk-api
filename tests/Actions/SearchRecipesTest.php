@@ -20,7 +20,7 @@ class SearchRecipesTest extends BaseTestCase
         $client = new WhiskApi($httpClient);
 
         $response = $client->searchRecipes([
-            'q' => 'salad',
+            'q' => 'sandwich',
         ]);
 
         $this->assertNotEmpty($response);
