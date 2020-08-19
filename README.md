@@ -83,7 +83,7 @@ The default test invocation will ignore the tests against the sandbox environmen
 |   - [ ]    |     Get All User Recipes      |              https://graph.whisk.com/v1/recipes               |     https://docs.whisk.com/api/user-recipes-and-collections/get-all-user-recipes      |
 |   - [ ]    |      Update User Recipe       |            https://graph.whisk.com/v1/:recipe\_id             |      https://docs.whisk.com/api/user-recipes-and-collections/update-user-recipe       |
 |   - [ ]    | Remove Recipe From Favourites |            https://graph.whisk.com/v1/:recipe\_id             | https://docs.whisk.com/api/user-recipes-and-collections/remove-recipe-from-favorites  |
-|   - [ ]    |       Create Collection       |            https://graph.whisk.com/v1/collections             |       https://docs.whisk.com/api/user-recipes-and-collections/create-collection       |
+|   - [x]    |       Create Collection       |            https://graph.whisk.com/v1/collections             |       https://docs.whisk.com/api/user-recipes-and-collections/create-collection       |
 |   - [ ]    |   Get All User Collections    |            https://graph.whisk.com/v1/collections             |   https://docs.whisk.com/api/user-recipes-and-collections/get-all-user-collections    |
 |   - [ ]    |        Get Collection         |          https://graph.whisk.com/v1/:collection\_id           |        https://docs.whisk.com/api/user-recipes-and-collections/get-collection         |
 |   - [ ]    |  Get Recipes From Collection  |      https://graph.whisk.com/v1/:collection\_id/recipes       | https://docs.whisk.com/api/user-recipes-and-collections/get-recipes-from-a-collection |

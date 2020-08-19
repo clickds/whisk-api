@@ -2,6 +2,7 @@
 
 namespace ClickDs\WhiskApi;
 
+use ClickDs\WhiskApi\Actions\Collections;
 use ClickDs\WhiskApi\Actions\Feed;
 use ClickDs\WhiskApi\Actions\Recipes;
 use ClickDs\WhiskApi\Exceptions\InvalidConfigurationException;
@@ -12,6 +13,7 @@ class WhiskApi
     use MakesHttpRequests;
     use Recipes;
     use Feed;
+    use Collections;
 
     private const DEFAULT_GUZZLE_CONFIG = [
         'base_uri'    => 'https://graph.whisk.com',

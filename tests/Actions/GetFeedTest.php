@@ -10,6 +10,9 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
 use Mockery;
 
+/**
+ * @group Feed
+ */
 class GetFeedTest extends BaseTestCase
 {
     use SandboxClient;

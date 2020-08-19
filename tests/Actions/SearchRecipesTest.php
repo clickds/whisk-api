@@ -6,6 +6,9 @@ use ClickDs\WhiskApi\Tests\BaseTestCase;
 use ClickDs\WhiskApi\Tests\Support\SandboxClient;
 use ClickDs\WhiskApi\WhiskApi;
 
+/**
+ * @group SearchRecipes
+ */
 class SearchRecipesTest extends BaseTestCase
 {
     use SandboxClient;
