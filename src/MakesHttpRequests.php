@@ -9,7 +9,7 @@ trait MakesHttpRequests
      */
     public function get(string $uri, array $queryParameters = [])
     {
-        $uri = '/' . $this->getVersion() . '/' . $uri;
+        $uri = '/'.$this->getVersion().'/'.$uri;
         $payload = [];
         if (!empty($queryParameters)) {
             $payload['query'] = $queryParameters;
@@ -23,7 +23,7 @@ trait MakesHttpRequests
      */
     public function post(string $uri, array $formParameters = [])
     {
-        $uri = '/' . $this->getVersion() . '/' . $uri;
+        $uri = '/'.$this->getVersion().'/'.$uri;
         $payload = [];
         if (!empty($formParameters)) {
             $payload['form_params'] = $formParameters;
