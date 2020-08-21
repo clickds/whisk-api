@@ -40,7 +40,6 @@ class GetUserTest extends BaseTestCase
         $this->assertArrayHasKey('user', $response, 'Could not find user key');
     }
 
-
     public function test_guzzle_makes_correct_request(): void
     {
         $uri = '/user/v2/me';
