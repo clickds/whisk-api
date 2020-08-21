@@ -6,7 +6,7 @@ trait MakesHttpRequests
 {
     /**
      * @param string $uriSegment
-     * @param array $queryParameters
+     * @param array  $queryParameters
      *
      * @return mixed
      */
@@ -23,7 +23,7 @@ trait MakesHttpRequests
 
     /**
      * @param string $uriSegment
-     * @param array $formParameters
+     * @param array  $formParameters
      *
      * @return mixed
      */
@@ -51,8 +51,8 @@ trait MakesHttpRequests
     }
 
     /**
-     * @param string $verb
-     * @param string $uri
+     * @param string     $verb
+     * @param string     $uri
      * @param array|null $payload
      *
      * @return mixed
@@ -71,6 +71,6 @@ trait MakesHttpRequests
 
     private function buildUri(string $uriSegment): string
     {
-        return '/' . $this->getVersion() . '/' . $uriSegment;
+        return '/'.$this->getVersion().'/'.$uriSegment;
     }
 }

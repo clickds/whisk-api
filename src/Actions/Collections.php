@@ -5,7 +5,7 @@ namespace ClickDs\WhiskApi\Actions;
 trait Collections
 {
     /**
-     * Create a collection
+     * Create a collection.
      *
      * @param array $parameters
      *
@@ -19,7 +19,7 @@ trait Collections
     }
 
     /**
-     * Delete a collection
+     * Delete a collection.
      *
      * @param int|string $id
      *

@@ -39,7 +39,7 @@ class DeleteCollectionTest extends BaseTestCase
     private function responseBody(): string
     {
         return json_encode([
-            "ok" => true
+            'ok' => true,
         ]);
     }
 }
