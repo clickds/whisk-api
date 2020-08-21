@@ -5,14 +5,13 @@ namespace ClickDs\WhiskApi;
 trait MakesHttpRequests
 {
     /**
-     * @param string $uriSegment
-     * @param array  $queryParameters
+     * @param string $uri
+     * @param array $queryParameters
      *
      * @return mixed
      */
-    public function get(string $uriSegment, array $queryParameters = [])
+    public function get(string $uri, array $queryParameters = [])
     {
-        $uri = $this->buildUri($uriSegment);
         $payload = [];
         if (!empty($queryParameters)) {
             $payload['query'] = $queryParameters;
@@ -22,14 +21,13 @@ trait MakesHttpRequests
     }
 
     /**
-     * @param string $uriSegment
-     * @param array  $formParameters
+     * @param string $uri
+     * @param array $formParameters
      *
      * @return mixed
      */
-    public function post(string $uriSegment, array $formParameters = [])
+    public function post(string $uri, array $formParameters = [])
     {
-        $uri = $this->buildUri($uriSegment);
         $payload = [];
         if (!empty($formParameters)) {
             $payload['form_params'] = $formParameters;
@@ -39,14 +37,12 @@ trait MakesHttpRequests
     }
 
     /**
-     * @param string $uriSegment
+     * @param string $uri
      *
      * @return mixed
      */
-    public function delete(string $uriSegment)
+    public function delete(string $uri)
     {
-        $uri = $this->buildUri($uriSegment);
-
         return $this->request('DELETE', $uri);
     }
 
@@ -67,10 +63,5 @@ trait MakesHttpRequests
         $responseBody = (string) $response->getBody();
 
         return json_decode($responseBody, true);
-    }
-
-    private function buildUri(string $uriSegment): string
-    {
-        return '/'.$this->getVersion().'/'.$uriSegment;
     }
 }

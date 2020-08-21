@@ -13,7 +13,7 @@ trait Collections
      */
     public function createCollection(array $parameters = [])
     {
-        $uri = 'collections';
+        $uri = '/v1/collections';
 
         return $this->post($uri, $parameters);
     }
@@ -27,6 +27,7 @@ trait Collections
      */
     public function deleteCollection($id)
     {
-        return $this->delete($id);
+        $uri = '/v1/' . $id;
+        return $this->delete($uri);
     }
 }

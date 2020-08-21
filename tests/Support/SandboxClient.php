@@ -6,11 +6,22 @@ use GuzzleHttp\Client as HttpClient;
 
 trait SandboxClient
 {
+    public function createUserTokenSandboxClient(string $apiKey)
+    {
+        $config = [
+            'headers' => [
+                'Authorization' => 'Bearer ' . $apiKey,
+            ],
+        ];
+
+        return $this->createGuzzleSandboxClient($config);
+    }
+
     public function createServerTokenSandboxClient(string $apiKey)
     {
         $config = [
             'headers' => [
-                'Authorization' => 'Token '.$apiKey,
+                'Authorization' => 'Token ' . $apiKey,
             ],
         ];
 
@@ -20,7 +31,7 @@ trait SandboxClient
     public function createGuzzleSandboxClient(array $config = [])
     {
         $defaults = [
-            'base_uri'    => 'https://testkitchen.whisk.com',
+            'base_uri'    => 'https://api.whisk-dev.com',
             'http_errors' => false,
             'headers'     => [
                 'Accept'       => 'application/json',

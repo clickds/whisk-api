@@ -5,6 +5,7 @@ namespace ClickDs\WhiskApi;
 use ClickDs\WhiskApi\Actions\Collections;
 use ClickDs\WhiskApi\Actions\Feed;
 use ClickDs\WhiskApi\Actions\Recipes;
+use ClickDs\WhiskApi\Actions\Users;
 use ClickDs\WhiskApi\Exceptions\InvalidConfigurationException;
 use GuzzleHttp\Client as HttpClient;
 
@@ -14,6 +15,7 @@ class WhiskApi
     use Recipes;
     use Feed;
     use Collections;
+    use Users;
 
     private const DEFAULT_GUZZLE_CONFIG = [
         'base_uri'    => 'https://graph.whisk.com',
@@ -29,20 +31,9 @@ class WhiskApi
      */
     private $httpClient;
 
-    /**
-     * @var string
-     */
-    private $version;
-
-    public function __construct(HttpClient $httpClient, string $version = 'v1')
+    public function __construct(HttpClient $httpClient)
     {
         $this->httpClient = $httpClient;
-        $this->version = $version;
-    }
-
-    private function getVersion(): string
-    {
-        return $this->version;
     }
 
     private function getHttpClient(): HttpClient

@@ -1,0 +1,94 @@
+{
+  "user": {
+    "id": "string",
+    "email": "string",
+    "phone": "string",
+    "user_settings": {
+      "personal_details": {
+        "first_name": "string",
+        "last_name": "string",
+        "photo_url": "string",
+        "gender": "GENDER_INVALID",
+        "country": "string",
+        "zipcode": "string",
+        "language": "string",
+        "activity_level": "ACTIVITY_LEVEL_INVALID",
+        "age": 0,
+        "height": {
+          "value": 0,
+          "unit": "UNIT_INVALID"
+        },
+        "weight": {
+          "value": 0,
+          "unit": "UNIT_INVALID"
+        },
+        "health_goals": {
+          "list": ["HEALTH_GOAL_INVALID"]
+        },
+        "year_of_birth": 0
+      },
+      "food_preferences": {
+        "diets": {
+          "list": ["DIET_INVALID"]
+        },
+        "avoidance_list": {
+          "list": ["AVOIDANCE_INVALID"]
+        },
+        "disliked_ingredients": {
+          "list": [
+            {
+              "name": "string",
+              "canonical_name": "string"
+            }
+          ]
+        },
+        "organic_preference": "ORGANIC_PREFERENCE_INVALID",
+        "nutrition_preferences": {
+          "list": ["NUTRITION_INVALID"]
+        },
+        "preferred_ingredients": {
+          "list": [
+            {
+              "name": "string",
+              "canonical_name": "string"
+            }
+          ]
+        }
+      },
+      "cooking_preferences": {
+        "household_adults": {
+          "size": 0
+        },
+        "household_children": {
+          "size": 0
+        },
+        "favourite_cuisines": {
+          "list": ["CUISINE_INVALID"]
+        },
+        "cooking_experience": "COOKING_EXPERIENCE_INVALID",
+        "cooking_max_time": {
+          "time": 0
+        },
+        "user_devices": {
+          "list": {
+            "device_type": "DEVICE_TYPE_INVALID",
+            "custom_device": "DEVICE_TYPE_INVALID"
+          }
+        }
+      },
+      "shopping_preferences": {
+        "preferred_retailers": {
+          "retailers": ["string"]
+        },
+        "budget_goal": "BUDGET_GOAL_INVALID",
+        "ethical_preferences": {
+          "list": ["ETHICAL_PREFERENCE_INVALID"]
+        }
+      }
+    },
+    "has_password": true,
+    "recommendations": {
+      "daily_calories": 0
+    }
+  }
+}
