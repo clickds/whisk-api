@@ -27,7 +27,8 @@ trait Collections
      */
     public function deleteCollection($id)
     {
-        $uri = '/v1/' . $id;
+        $uri = '/v1/'.$id;
+
         return $this->delete($uri);
     }
 }

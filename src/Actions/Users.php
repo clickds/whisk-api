@@ -5,7 +5,7 @@ namespace ClickDs\WhiskApi\Actions;
 trait Users
 {
     /**
-     * Get the current user (requires user authentication token on Guzzle client)
+     * Get the current user (requires user authentication token on Guzzle client).
      *
      * @param array $parameters
      *

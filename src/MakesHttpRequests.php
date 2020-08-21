@@ -6,7 +6,7 @@ trait MakesHttpRequests
 {
     /**
      * @param string $uri
-     * @param array $queryParameters
+     * @param array  $queryParameters
      *
      * @return mixed
      */
@@ -22,7 +22,7 @@ trait MakesHttpRequests
 
     /**
      * @param string $uri
-     * @param array $formParameters
+     * @param array  $formParameters
      *
      * @return mixed
      */
