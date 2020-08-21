@@ -5,7 +5,7 @@ namespace ClickDs\WhiskApi\Actions;
 trait Recipes
 {
     /**
-     * Get a recipe
+     * Get a recipe.
      *
      * @param int|string $id
      *
@@ -14,7 +14,7 @@ trait Recipes
     public function getRecipe($id)
     {
         if (filter_var($id, FILTER_VALIDATE_URL)) {
-            $uri = '?id=' . $id;
+            $uri = '?id='.$id;
         } else {
             $uri = $id;
         }
@@ -23,7 +23,7 @@ trait Recipes
     }
 
     /**
-     * Search recipes
+     * Search recipes.
      *
      * @param array $args
      *
