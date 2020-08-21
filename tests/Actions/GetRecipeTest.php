@@ -59,7 +59,7 @@ class GetRecipeTest extends BaseTestCase
         $id = '9773cb7eca5d11e7ae7e42010a9a0035';
         $uri = '/v1/'.$id;
         $mock = Mockery::mock(Client::class);
-        $mock->shouldReceive('request')->once()->with('GET', $uri, [])->andReturn(new Response());
+        $mock->shouldReceive('request')->once()->with('GET', $uri)->andReturn(new Response());
         $client = new WhiskApi($mock);
 
         $response = $client->getRecipe($id);
@@ -72,7 +72,7 @@ class GetRecipeTest extends BaseTestCase
         $id = 'https://www.whisk.com/api/9773cb7eca5d11e7ae7e42010a9a0035';
         $uri = '/v1/?id='.$id;
         $mock = Mockery::mock(Client::class);
-        $mock->shouldReceive('request')->once()->with('GET', $uri, [])->andReturn(new Response());
+        $mock->shouldReceive('request')->once()->with('GET', $uri)->andReturn(new Response());
         $client = new WhiskApi($mock);
 
         $response = $client->getRecipe($id);

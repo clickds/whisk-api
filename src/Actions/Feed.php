@@ -5,6 +5,8 @@ namespace ClickDs\WhiskApi\Actions;
 trait Feed
 {
     /**
+     * Get the feed
+     *
      * @param array $queryParameters
      *
      * @return mixed
