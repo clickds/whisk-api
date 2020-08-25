@@ -10,7 +10,7 @@ trait SandboxClient
     {
         $config = [
             'headers' => [
-                'Authorization' => 'Bearer ' . $apiKey,
+                'Authorization' => 'Bearer '.$apiKey,
             ],
         ];
 
@@ -21,7 +21,7 @@ trait SandboxClient
     {
         $config = [
             'headers' => [
-                'Authorization' => 'Token ' . $apiKey,
+                'Authorization' => 'Token '.$apiKey,
             ],
         ];
 
