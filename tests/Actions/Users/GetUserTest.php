@@ -24,6 +24,22 @@ class GetUserTest extends BaseTestCase
     }
 
     /**
+     * @group sandboxv1
+     */
+    public function test_get_user_from_whisk_version_1(): void
+    {
+        $apiKey = getenv('USER_API_KEY');
+        $httpClient = $this->createServerTokenSandboxClient($apiKey, 1);
+        $client = new WhiskApi($httpClient);
+
+        $response = $client->getUser();
+
+        var_dump($response);
+        $this->assertNotEmpty($response);
+        $this->assertArrayHasKey('user', $response, 'Could not find user key');
+    }
+
+    /**
      * @group sandbox
      */
     public function test_get_user_from_whisk(): void

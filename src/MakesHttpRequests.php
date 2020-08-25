@@ -60,6 +60,7 @@ trait MakesHttpRequests
         } else {
             $response = $this->getHttpClient()->request($verb, $uri, $payload);
         }
+        var_dump($response->getStatusCode());
         $responseBody = (string) $response->getBody();
 
         return json_decode($responseBody, true);
