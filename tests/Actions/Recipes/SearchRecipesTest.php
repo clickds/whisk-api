@@ -39,8 +39,8 @@ class SearchRecipesTest extends BaseTestCase
         $mock = Mockery::mock(Client::class);
         $mock->shouldReceive('request')->once()->with('POST', $uri, [
             'form_params' => [
-                'query' => 'abc'
-            ]
+                'query' => 'abc',
+            ],
         ])
             ->andReturn(new Response(200, [], $this->responseBody()));
         $client = new WhiskApi($mock);

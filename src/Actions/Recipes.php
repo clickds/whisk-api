@@ -13,7 +13,7 @@ trait Recipes
      */
     public function getRecipe($id)
     {
-        $uri = '/recipe/v2/' . $id;
+        $uri = '/recipe/v2/'.$id;
 
         return $this->get($uri);
     }
@@ -61,7 +61,7 @@ trait Recipes
      */
     public function removeRecipeFromCollections(string $recipeId, array $collectionIds)
     {
-        $uri = '/recipe/v2/' . $recipeId;
+        $uri = '/recipe/v2/'.$recipeId;
         $parameters = [
             'collection_ids' => $collectionIds,
         ];
