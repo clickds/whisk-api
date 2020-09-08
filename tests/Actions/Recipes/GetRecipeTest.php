@@ -57,7 +57,7 @@ class GetRecipeTest extends BaseTestCase
     public function test_guzzle_hits_the_correct_url_when_passed_id(): void
     {
         $id = '9773cb7eca5d11e7ae7e42010a9a0035';
-        $uri = '/v1/' . $id;
+        $uri = '/v1/'.$id;
         $mock = Mockery::mock(Client::class);
         $mock->shouldReceive('request')->once()->with('GET', $uri)->andReturn(new Response());
         $client = new WhiskApi($mock);
@@ -70,7 +70,7 @@ class GetRecipeTest extends BaseTestCase
     public function test_guzzle_hits_the_correct_url_when_passed_url_as_id(): void
     {
         $id = 'https://www.whisk.com/api/9773cb7eca5d11e7ae7e42010a9a0035';
-        $uri = '/v1/?id=' . $id;
+        $uri = '/v1/?id='.$id;
         $mock = Mockery::mock(Client::class);
         $mock->shouldReceive('request')->once()->with('GET', $uri)->andReturn(new Response());
         $client = new WhiskApi($mock);

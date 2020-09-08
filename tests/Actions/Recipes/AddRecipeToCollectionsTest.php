@@ -27,7 +27,7 @@ class AddRecipeToCollectionsTest extends BaseTestCase
         $uri = '/recipe/v2';
         $mock = Mockery::mock(Client::class);
         $parameters = [
-            'recipe_id' => 'whisk123',
+            'recipe_id'      => 'whisk123',
             'collection_ids' => ['collection1', 'collection2'],
         ];
         $mock->shouldReceive('request')->once()

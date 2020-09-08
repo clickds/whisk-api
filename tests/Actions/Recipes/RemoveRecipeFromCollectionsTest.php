@@ -7,7 +7,6 @@ use ClickDs\WhiskApi\Tests\Support\MockResponses;
 use ClickDs\WhiskApi\WhiskApi;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
-use Illuminate\Support\Arr;
 use Mockery;
 
 /**
