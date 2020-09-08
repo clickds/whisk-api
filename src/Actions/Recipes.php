@@ -13,12 +13,7 @@ trait Recipes
      */
     public function getRecipe($id)
     {
-        $uri = '/v1/';
-        if (filter_var($id, FILTER_VALIDATE_URL)) {
-            $uri .= '?id='.$id;
-        } else {
-            $uri .= $id;
-        }
+        $uri = '/recipe/v2/' . $id;
 
         return $this->get($uri);
     }
@@ -32,10 +27,9 @@ trait Recipes
      */
     public function searchRecipes(array $args = [])
     {
-        $uri = '/v1/search';
-        $queryParameters = array_merge(['type' => 'recipe'], $args);
+        $uri = '/recipe/v2/search';
 
-        return $this->get($uri, $queryParameters);
+        return $this->post($uri, $args);
     }
 
     /**
@@ -67,7 +61,7 @@ trait Recipes
      */
     public function removeRecipeFromCollections(string $recipeId, array $collectionIds)
     {
-        $uri = '/recipe/v2/'.$recipeId;
+        $uri = '/recipe/v2/' . $recipeId;
         $parameters = [
             'collection_ids' => $collectionIds,
         ];

@@ -13,7 +13,7 @@ trait Feed
      */
     public function getFeed(array $queryParameters = [])
     {
-        $uri = '/v1/feed';
+        $uri = '/feed/v2/get';
 
         return $this->get($uri, $queryParameters);
     }

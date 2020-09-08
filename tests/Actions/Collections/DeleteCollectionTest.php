@@ -23,7 +23,7 @@ class DeleteCollectionTest extends BaseTestCase
 
     public function test_guzzle_makes_correct_request(): void
     {
-        $uri = '/v1/1';
+        $uri = '/collection/v2/1';
         $mock = Mockery::mock(Client::class);
         $mock->shouldReceive('request')->once()
             ->with('DELETE', $uri)

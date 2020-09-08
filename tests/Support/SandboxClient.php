@@ -10,7 +10,7 @@ trait SandboxClient
     {
         $config = [
             'headers' => [
-                'Authorization' => 'Bearer '.$apiKey,
+                'Authorization' => 'Bearer ' . $apiKey,
             ],
         ];
 
@@ -21,7 +21,7 @@ trait SandboxClient
     {
         $config = [
             'headers' => [
-                'Authorization' => 'Token '.$apiKey,
+                'Authorization' => 'Token ' . $apiKey,
             ],
         ];
 
@@ -30,12 +30,7 @@ trait SandboxClient
 
     public function createGuzzleSandboxClient(array $config = [], int $version = 2)
     {
-        if ($version > 1) {
-            $baseUri = 'https://api.whisk-dev.com';
-        } else {
-            $baseUri = 'https://testkitchen.whisk.com';
-        }
-
+        $baseUri = 'https://api.whisk-dev.com';
         $defaults = [
             'base_uri'    => $baseUri,
             'http_errors' => false,

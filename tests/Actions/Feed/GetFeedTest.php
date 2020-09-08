@@ -53,7 +53,7 @@ class GetFeedTest extends BaseTestCase
     public function test_guzzle_hits_the_correct_url_when_passed_id(): void
     {
         $id = '301d1456411e4082af0e37d12ef5ec49';
-        $uri = '/v1/feed';
+        $uri = '/feed/v2/get';
         $mock = Mockery::mock(Client::class);
         $queryParameters = ['id' => $id];
         $mock->shouldReceive('request')->once()

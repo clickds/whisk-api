@@ -18,9 +18,7 @@ class ServiceProvider extends LaravelServiceProvider
             $guzzleConfiguration = Arr::get($parameters, 'guzzleConfiguration', []);
             $guzzleClient = WhiskApi::createClient($configuration, $guzzleConfiguration);
 
-            $version = Arr::get($parameters, 'version', 'v1');
-
-            return new WhiskApi($guzzleClient, $version);
+            return new WhiskApi($guzzleClient);
         });
     }
 }

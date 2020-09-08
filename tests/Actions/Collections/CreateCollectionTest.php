@@ -23,7 +23,7 @@ class CreateCollectionTest extends BaseTestCase
 
     public function test_guzzle_makes_correct_request(): void
     {
-        $uri = '/v1/collections';
+        $uri = '/recipe/v2/collection';
         $mock = Mockery::mock(Client::class);
         $parameters = ['name' => 'My collection'];
         $mock->shouldReceive('request')->once()
