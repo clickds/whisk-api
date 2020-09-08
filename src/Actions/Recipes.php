@@ -15,7 +15,7 @@ trait Recipes
     {
         $uri = '/v1/';
         if (filter_var($id, FILTER_VALIDATE_URL)) {
-            $uri .= '?id=' . $id;
+            $uri .= '?id='.$id;
         } else {
             $uri .= $id;
         }
@@ -39,10 +39,10 @@ trait Recipes
     }
 
     /**
-     * Add recipe to collections
+     * Add recipe to collections.
      *
      * @param string $recipeId
-     * @param array $collectionIds
+     * @param array  $collectionIds
      *
      * @return mixed
      */
@@ -50,7 +50,7 @@ trait Recipes
     {
         $uri = '/recipe/v2';
         $parameters = [
-            'recipe_id' => $recipeId,
+            'recipe_id'      => $recipeId,
             'collection_ids' => $collectionIds,
         ];
 
@@ -58,16 +58,16 @@ trait Recipes
     }
 
     /**
-     * Remove recipe from collections
+     * Remove recipe from collections.
      *
      * @param string $recipeId
-     * @param array $collectionIds
+     * @param array  $collectionIds
      *
      * @return mixed
      */
     public function removeRecipeFromCollections(string $recipeId, array $collectionIds)
     {
-        $uri = '/recipe/v2/' . $recipeId;
+        $uri = '/recipe/v2/'.$recipeId;
         $parameters = [
             'collection_ids' => $collectionIds,
         ];
