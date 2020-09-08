@@ -1,0 +1,9 @@
+{
+  "id": "whisk123",
+  "saved": {
+    "value": true,
+    "collection_ids": ["collection1", "collection2"],
+    "owner": true,
+    "recipe_type": "RECIPE_TYPE_INVALID"
+  }
+}

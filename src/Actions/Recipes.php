@@ -15,7 +15,7 @@ trait Recipes
     {
         $uri = '/v1/';
         if (filter_var($id, FILTER_VALIDATE_URL)) {
-            $uri .= '?id='.$id;
+            $uri .= '?id=' . $id;
         } else {
             $uri .= $id;
         }
@@ -36,5 +36,42 @@ trait Recipes
         $queryParameters = array_merge(['type' => 'recipe'], $args);
 
         return $this->get($uri, $queryParameters);
+    }
+
+    /**
+     * Add recipe to collections
+     *
+     * @param string $recipeId
+     * @param array $collectionIds
+     *
+     * @return mixed
+     */
+    public function addRecipeToCollections(string $recipeId, array $collectionIds)
+    {
+        $uri = '/recipe/v2';
+        $parameters = [
+            'recipe_id' => $recipeId,
+            'collection_ids' => $collectionIds,
+        ];
+
+        return $this->post($uri, $parameters);
+    }
+
+    /**
+     * Remove recipe from collections
+     *
+     * @param string $recipeId
+     * @param array $collectionIds
+     *
+     * @return mixed
+     */
+    public function removeRecipeFromCollections(string $recipeId, array $collectionIds)
+    {
+        $uri = '/recipe/v2/' . $recipeId;
+        $parameters = [
+            'collection_ids' => $collectionIds,
+        ];
+
+        return $this->delete($uri, $parameters);
     }
 }

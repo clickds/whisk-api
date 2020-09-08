@@ -41,9 +41,14 @@ trait MakesHttpRequests
      *
      * @return mixed
      */
-    public function delete(string $uri)
+    public function delete(string $uri, array $parameters = [])
     {
-        return $this->request('DELETE', $uri);
+        $payload = [];
+        if (!empty($parameters)) {
+            $payload['json'] = $parameters;
+        }
+
+        return $this->request('DELETE', $uri, $payload);
     }
 
     /**
@@ -60,7 +65,6 @@ trait MakesHttpRequests
         } else {
             $response = $this->getHttpClient()->request($verb, $uri, $payload);
         }
-        var_dump($response->getStatusCode());
         $responseBody = (string) $response->getBody();
 
         return json_decode($responseBody, true);

@@ -13,8 +13,7 @@ trait Users
      */
     public function getUser()
     {
-        $uri = '/v1/me';
-        //$uri = '/user/v2/me';
+        $uri = '/user/v2/me';
 
         return $this->get($uri);
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace ClickDs\WhiskApi\Tests\Actions;
+namespace ClickDs\WhiskApi\Tests\Actions\Feed;
 
 use ClickDs\WhiskApi\Tests\BaseTestCase;
 use ClickDs\WhiskApi\Tests\Support\MockResponses;
