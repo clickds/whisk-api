@@ -27,8 +27,22 @@ trait Collections
      */
     public function deleteCollection($id)
     {
-        $uri = '/collection/v2/'.$id;
+        $uri = '/collection/v2/' . $id;
 
         return $this->delete($uri);
+    }
+
+    /**
+     * Get recipes in a collection
+     *
+     * @param int|string $id
+     *
+     * @return mixed
+     */
+    public function getRecipesInCollection($id)
+    {
+        $uri = '/collection/v2/' . $id . '/recipe';
+
+        return $this->get($uri);
     }
 }

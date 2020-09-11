@@ -1,0 +1,245 @@
+{
+  "recipes": [
+    {
+      "id": "string",
+      "name": "string",
+      "description": "string",
+      "ingredients": [
+        {
+          "text": "string",
+          "group": "string"
+        }
+      ],
+      "instructions": {
+        "steps": [
+          {
+            "text": "string",
+            "images": [
+              {
+                "responsive": {
+                  "url": "string",
+                  "width": 0,
+                  "height": 0
+                },
+                "url": "string"
+              }
+            ],
+            "group": "string",
+            "intents": [
+              {
+                "name": "string",
+                "options": [
+                  {
+                    "key": "string",
+                    "value": 0,
+                    "unit": "string"
+                  }
+                ]
+              }
+            ],
+            "labels": [
+              {
+                "name": "string",
+                "labels": [
+                  {
+                    "name": "string"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "images": [
+        {
+          "responsive": {
+            "url": "string",
+            "width": 0,
+            "height": 0
+          },
+          "url": "string"
+        }
+      ],
+      "videos": [
+        {
+          "url": "string",
+          "content_url": "string",
+          "embed_url": "string",
+          "player_type": "string",
+          "thumbnail": "string",
+          "duration": 0,
+          "height": 0,
+          "width": 0
+        }
+      ],
+      "source": {
+        "name": "string",
+        "display_name": "string",
+        "source_recipe_url": "string",
+        "image": {
+          "responsive": {
+            "url": "string",
+            "width": 0,
+            "height": 0
+          },
+          "url": "string"
+        },
+        "license": "LICENCE_INVALID"
+      },
+      "servings": 0,
+      "servings_scaled": 0,
+      "durations": {
+        "cook_time": 0,
+        "prep_time": 0,
+        "total_time": 0
+      },
+      "normalized_ingredients": [
+        {
+          "text": "string",
+          "group": "string",
+          "analysis": {
+            "product": {
+              "canonical_name": "string",
+              "original_name": "string"
+            },
+            "category": {
+              "canonical_name": "string"
+            },
+            "brand": {
+              "canonical_name": "string"
+            },
+            "quantity": 0,
+            "unit": "string",
+            "multiplier": 0,
+            "comment": "string",
+            "image_url": "string"
+          },
+          "source_text": "string",
+          "labels": [
+            {
+              "name": "string",
+              "labels": [
+                {
+                  "name": "string"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "nutrition": {
+        "status": "STATUS_INVALID",
+        "total": [
+          {
+            "label": "string",
+            "code": "NUTRITION_CODE_INVALID",
+            "value": 0,
+            "unit": "NUTRITION_UNIT_INVALID"
+          }
+        ],
+        "coverage": 0,
+        "labels": [
+          {
+            "name": "string",
+            "display_name": "string"
+          }
+        ],
+        "health_score": {
+          "value": 0,
+          "nutrients_influence": [
+            {
+              "code": "NUTRITION_CODE_INVALID",
+              "influence": 0,
+              "comment": "string"
+            }
+          ]
+        },
+        "glycemic_index": {
+          "value": 0
+        },
+        "glycemic_load": {
+          "value": 0
+        }
+      },
+      "labels": {
+        "meal_type": [
+          {
+            "name": "string",
+            "display_name": "string"
+          }
+        ],
+        "cuisine": [
+          {
+            "name": "string",
+            "display_name": "string"
+          }
+        ],
+        "category": [
+          {
+            "name": "string",
+            "display_name": "string"
+          }
+        ],
+        "technique": [
+          {
+            "name": "string",
+            "display_name": "string"
+          }
+        ],
+        "holiday": [
+          {
+            "name": "string",
+            "display_name": "string"
+          }
+        ],
+        "seasonality": [
+          {
+            "name": "string",
+            "display_name": "string"
+          }
+        ]
+      },
+      "constraints": {
+        "violates": {
+          "diets": ["DIET_INVALID"],
+          "avoidances": ["AVOIDANCE_INVALID"]
+        }
+      },
+      "saved": {
+        "value": true,
+        "collection_ids": ["string"],
+        "owner": true,
+        "recipe_type": "RECIPE_TYPE_INVALID"
+      },
+      "author": {
+        "name": "string",
+        "image": {
+          "responsive": {
+            "url": "string",
+            "width": 0,
+            "height": 0
+          },
+          "url": "string"
+        }
+      },
+      "language": "string",
+      "custom_labels": [
+        {
+          "name": "string",
+          "labels": [
+            {
+              "name": "string"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "paging": {
+    "cursors": {
+      "after": "string",
+      "before": "string"
+    },
+    "total": "string"
+  }
+}
