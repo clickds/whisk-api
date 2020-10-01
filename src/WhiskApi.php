@@ -5,6 +5,7 @@ namespace ClickDs\WhiskApi;
 use ClickDs\WhiskApi\Actions\Collections;
 use ClickDs\WhiskApi\Actions\Feed;
 use ClickDs\WhiskApi\Actions\Recipes;
+use ClickDs\WhiskApi\Actions\Tokens;
 use ClickDs\WhiskApi\Actions\Users;
 use ClickDs\WhiskApi\Exceptions\InvalidConfigurationException;
 use GuzzleHttp\Client as HttpClient;
@@ -12,9 +13,10 @@ use GuzzleHttp\Client as HttpClient;
 class WhiskApi
 {
     use MakesHttpRequests;
-    use Recipes;
-    use Feed;
     use Collections;
+    use Feed;
+    use Recipes;
+    use Tokens;
     use Users;
 
     private const DEFAULT_GUZZLE_CONFIG = [
