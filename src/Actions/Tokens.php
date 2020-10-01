@@ -12,12 +12,12 @@ trait Tokens
      * $parameters should consist of
      *
      * @param array $parameters
-     *     $parameters = [
-     *         'client_id' => string,
-     *         'client_secret' => string,
-     *         'grant_type' => string,
-     *         'refresh_token' => string,
-     *     ];
+     *                          $parameters = [
+     *                          'client_id' => string,
+     *                          'client_secret' => string,
+     *                          'grant_type' => string,
+     *                          'refresh_token' => string,
+     *                          ];
      *
      * @return mixed
      */
@@ -28,6 +28,7 @@ trait Tokens
             // We'll use the default handler so we don't rerun our middleware
             'handler' => HandlerStack::create(),
         ]);
+
         return json_decode((string) $response->getBody(), true);
     }
 }
