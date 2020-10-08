@@ -14,9 +14,9 @@ class TokenManager
     private ClientInterface $client;
 
     /**
-     * @param string $clientId
-     * @param string $clientSecret
-     * @param ClientInterface $client = null;
+     * @param string          $clientId
+     * @param string          $clientSecret
+     * @param ClientInterface $client       = null;
      */
     public function __construct(string $clientId, string $clientSecret, ClientInterface $client = null)
     {
@@ -34,11 +34,11 @@ class TokenManager
     public function fetchAccessToken(string $authorizationCode, string $redirectUrl)
     {
         return $this->post('https://login.whisk.com/oauth/v2/token', [
-            'code' => $authorizationCode,
-            'client_id' => $this->getClientId(),
+            'code'          => $authorizationCode,
+            'client_id'     => $this->getClientId(),
             'client_secret' => $this->getClientSecret(),
-            'grant_type' => 'authorization_code',
-            'redirect_url' => $redirectUrl,
+            'grant_type'    => 'authorization_code',
+            'redirect_url'  => $redirectUrl,
         ]);
     }
 
@@ -50,9 +50,9 @@ class TokenManager
     public function refreshToken(string $refreshToken)
     {
         return $this->post('https://login.whisk.com/oauth/v2/token', [
-            'client_id' => $this->getClientId(),
+            'client_id'     => $this->getClientId(),
             'client_secret' => $this->getClientSecret(),
-            'grant_type' => 'refresh_token',
+            'grant_type'    => 'refresh_token',
             'refresh_token' => $refreshToken,
         ]);
     }
