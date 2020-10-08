@@ -37,6 +37,7 @@ class WhiskApi
     public static function createApiClient(Configuration $configuration): WhiskApi
     {
         $client = new HttpClient($configuration->guzzleConfig());
+
         return new WhiskApi($client);
     }
 }

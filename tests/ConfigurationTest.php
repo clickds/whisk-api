@@ -4,7 +4,6 @@ namespace ClickDs\WhiskApi\Tests;
 
 use ClickDs\WhiskApi\Configuration;
 use ClickDs\WhiskApi\Exceptions\InvalidConfigurationException;
-use ClickDs\WhiskApi\WhiskApi;
 use PHPUnit\Framework\TestCase;
 
 class ConfigurationTest extends TestCase
@@ -39,7 +38,7 @@ class ConfigurationTest extends TestCase
 
         $headerConfig = $config->guzzleConfig()['headers'];
 
-        $this->assertEquals($headerConfig['Authorization'], 'Token ' . $apiToken);
+        $this->assertEquals($headerConfig['Authorization'], 'Token '.$apiToken);
     }
 
     public function test_when_token_type_is_client()
@@ -52,7 +51,7 @@ class ConfigurationTest extends TestCase
 
         $headerConfig = $config->guzzleConfig()['headers'];
 
-        $this->assertEquals($headerConfig['Authorization'], 'Token ' . $apiToken);
+        $this->assertEquals($headerConfig['Authorization'], 'Token '.$apiToken);
     }
 
     public function test_when_token_type_is_user_access()
@@ -65,6 +64,6 @@ class ConfigurationTest extends TestCase
 
         $headerConfig = $config->guzzleConfig()['headers'];
 
-        $this->assertEquals($headerConfig['Authorization'], 'Bearer ' . $apiToken);
+        $this->assertEquals($headerConfig['Authorization'], 'Bearer '.$apiToken);
     }
 }
