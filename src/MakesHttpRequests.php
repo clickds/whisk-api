@@ -2,8 +2,15 @@
 
 namespace ClickDs\WhiskApi;
 
+use Exception;
+
 trait MakesHttpRequests
 {
+    private function getHttpClient()
+    {
+        throw new Exception('You must define a private getHttpClient method');
+    }
+
     /**
      * @param string $uri
      * @param array  $queryParameters
