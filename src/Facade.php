@@ -8,6 +8,6 @@ class Facade extends LaravelFacade
 {
     protected static function getFacadeAccessor(): string
     {
-        return 'whisk-api';
+        return WhiskApi::class;
     }
 }

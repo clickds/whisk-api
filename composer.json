@@ -31,9 +31,6 @@
   },
   "extra": {
     "laravel": {
-      "providers": [
-        "ClickDs\\WhiskApi\\ServiceProvider"
-      ],
       "aliases": {
         "WhiskApi": "ClickDs\\WhiskApi\\Facade"
       }
