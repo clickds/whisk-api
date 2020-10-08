@@ -41,7 +41,7 @@ class ConfigurationTest extends TestCase
 
         $headerConfig = $client->getConfig('headers');
 
-        $this->assertEquals($headerConfig['Authorization'], 'Token ' . $apiToken);
+        $this->assertEquals($headerConfig['Authorization'], 'Token '.$apiToken);
     }
 
     public function test_when_token_type_is_client()
@@ -56,7 +56,7 @@ class ConfigurationTest extends TestCase
 
         $headerConfig = $client->getConfig('headers');
 
-        $this->assertEquals($headerConfig['Authorization'], 'Token ' . $apiToken);
+        $this->assertEquals($headerConfig['Authorization'], 'Token '.$apiToken);
     }
 
     public function test_when_token_type_is_user_access()
@@ -71,6 +71,6 @@ class ConfigurationTest extends TestCase
 
         $headerConfig = $client->getConfig('headers');
 
-        $this->assertEquals($headerConfig['Authorization'], 'Bearer ' . $apiToken);
+        $this->assertEquals($headerConfig['Authorization'], 'Bearer '.$apiToken);
     }
 }

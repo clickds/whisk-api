@@ -34,10 +34,10 @@ class Configuration
     public function guzzleConfig(): array
     {
         return [
-            'base_uri' => $this->baseUri,
+            'base_uri'    => $this->baseUri,
             'http_errors' => $this->httpErrors,
-            'headers' => $this->headers,
-            'handler' => $this->handlerStack,
+            'headers'     => $this->headers,
+            'handler'     => $this->handlerStack,
         ];
     }
 
@@ -47,6 +47,7 @@ class Configuration
         if (is_null($handlerStack)) {
             return HandlerStack::create();
         }
+
         return $handlerStack;
     }
 
@@ -69,6 +70,7 @@ class Configuration
         if (!in_array($tokenType, self::TOKEN_TYPES)) {
             throw new InvalidConfigurationException('token_type must be a valid token type.');
         }
+
         return $tokenType;
     }
 
@@ -78,6 +80,7 @@ class Configuration
         if (is_null($apiToken)) {
             throw new InvalidConfigurationException('api_token must be provided.');
         }
+
         return $apiToken;
     }
 
@@ -86,6 +89,7 @@ class Configuration
         if (array_key_exists($key, $array)) {
             return $array[$key];
         }
+
         return $default;
     }
 }
