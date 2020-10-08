@@ -16,15 +16,6 @@ class WhiskApi
     use Recipes;
     use Users;
 
-    private const DEFAULT_GUZZLE_CONFIG = [
-        'base_uri'    => 'https://graph.whisk.com',
-        'http_errors' => false,
-        'headers'     => [
-            'Accept'       => 'application/json',
-            'Content-Type' => 'application/json',
-        ],
-    ];
-
     /**
      * @var HttpClient
      */
@@ -43,8 +34,9 @@ class WhiskApi
     /**
      * @param Configuration $configuration
      */
-    public static function createClient(Configuration $configuration): HttpClient
+    public static function createApiClient(Configuration $configuration): WhiskApi
     {
-        return new HttpClient($configuration->guzzleConfig());
+        $client = new HttpClient($configuration->guzzleConfig());
+        return new WhiskApi($client);
     }
 }

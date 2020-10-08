@@ -37,11 +37,9 @@ class ConfigurationTest extends TestCase
             'token_type' => 'server',
         ]);
 
-        $client = WhiskApi::createClient($config);
+        $headerConfig = $config->guzzleConfig()['headers'];
 
-        $headerConfig = $client->getConfig('headers');
-
-        $this->assertEquals($headerConfig['Authorization'], 'Token '.$apiToken);
+        $this->assertEquals($headerConfig['Authorization'], 'Token ' . $apiToken);
     }
 
     public function test_when_token_type_is_client()
@@ -52,11 +50,9 @@ class ConfigurationTest extends TestCase
             'token_type' => 'client',
         ]);
 
-        $client = WhiskApi::createClient($config);
+        $headerConfig = $config->guzzleConfig()['headers'];
 
-        $headerConfig = $client->getConfig('headers');
-
-        $this->assertEquals($headerConfig['Authorization'], 'Token '.$apiToken);
+        $this->assertEquals($headerConfig['Authorization'], 'Token ' . $apiToken);
     }
 
     public function test_when_token_type_is_user_access()
@@ -67,10 +63,8 @@ class ConfigurationTest extends TestCase
             'token_type' => 'user_access',
         ]);
 
-        $client = WhiskApi::createClient($config);
+        $headerConfig = $config->guzzleConfig()['headers'];
 
-        $headerConfig = $client->getConfig('headers');
-
-        $this->assertEquals($headerConfig['Authorization'], 'Bearer '.$apiToken);
+        $this->assertEquals($headerConfig['Authorization'], 'Bearer ' . $apiToken);
     }
 }

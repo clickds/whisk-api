@@ -42,7 +42,7 @@ class GetFeedTest extends BaseTestCase
         $responses = [
             new Response(200, [], $this->responseBody()),
         ];
-        $client = $this->createClientWithMockedResponses($responses);
+        $client = $this->createApiClientWithMockedResponses($responses);
         $id = '301d1456411e4082af0e37d12ef5ec49';
 
         $response = $client->getFeed(['id' => $id]);

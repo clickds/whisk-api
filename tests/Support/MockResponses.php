@@ -16,7 +16,7 @@ trait MockResponses
         return HandlerStack::create($mock);
     }
 
-    private function createClientWithMockedResponses(array $responses, string $tokenType = 'server'): WhiskApi
+    private function createApiClientWithMockedResponses(array $responses, string $tokenType = 'server'): WhiskApi
     {
         $handler = $this->createHandlerStack($responses);
         $config = new Configuration([
@@ -24,8 +24,7 @@ trait MockResponses
             'token_type'    => $tokenType,
             'handler_stack' => $handler,
         ]);
-        $client = WhiskApi::createClient($config);
 
-        return new WhiskApi($client);
+        return WhiskApi::createApiClient($config);
     }
 }
