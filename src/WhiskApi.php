@@ -44,26 +44,10 @@ class WhiskApi
     }
 
     /**
-     * @param array<string> $configuration
-     * @param array<mixed>  $guzzleConfig
+     * @param Configuration $configuration
      */
-    public static function createClient(array $configuration, array $guzzleConfig = []): HttpClient
+    public static function createClient(Configuration $configuration): HttpClient
     {
-        $difference = array_diff(['api_token', 'token_type'], array_keys($configuration));
-        if (count($difference) !== 0) {
-            throw new InvalidConfigurationException('api_token must be provided.');
-        }
-
-        $apiToken = $configuration['api_token'];
-        $tokenType = $configuration['token_type'];
-
-        $authToken = $tokenType === 'user_access' ? 'Bearer ' : 'Token ';
-        $authToken .= $apiToken;
-
-        $defaultConfig = static::DEFAULT_GUZZLE_CONFIG;
-        $defaultConfig['headers']['Authorization'] = $authToken;
-        $clientConfig = array_merge($defaultConfig, $guzzleConfig);
-
-        return new HttpClient($clientConfig);
+        return new HttpClient($configuration->guzzleConfig());
     }
 }

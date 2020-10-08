@@ -2,6 +2,7 @@
 
 namespace ClickDs\WhiskApi\Tests\Support;
 
+use ClickDs\WhiskApi\Configuration;
 use ClickDs\WhiskApi\WhiskApi;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
@@ -18,14 +19,12 @@ trait MockResponses
     private function createClientWithMockedResponses(array $responses, string $tokenType = 'server'): WhiskApi
     {
         $handler = $this->createHandlerStack($responses);
-        $config = [
+        $config = new Configuration([
             'api_token'  => 'abc',
             'token_type' => $tokenType,
-        ];
-        $guzzleConfig = [
-            'handler' => $handler,
-        ];
-        $client = WhiskApi::createClient($config, $guzzleConfig);
+            'handler_stack' => $handler,
+        ]);
+        $client = WhiskApi::createClient($config);
 
         return new WhiskApi($client);
     }
