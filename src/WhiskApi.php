@@ -7,7 +7,6 @@ use ClickDs\WhiskApi\Actions\Feed;
 use ClickDs\WhiskApi\Actions\Recipes;
 use ClickDs\WhiskApi\Actions\Tokens;
 use ClickDs\WhiskApi\Actions\Users;
-use ClickDs\WhiskApi\Exceptions\InvalidConfigurationException;
 use GuzzleHttp\Client as HttpClient;
 
 class WhiskApi

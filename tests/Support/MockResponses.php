@@ -20,8 +20,8 @@ trait MockResponses
     {
         $handler = $this->createHandlerStack($responses);
         $config = new Configuration([
-            'api_token'  => 'abc',
-            'token_type' => $tokenType,
+            'api_token'     => 'abc',
+            'token_type'    => $tokenType,
             'handler_stack' => $handler,
         ]);
         $client = WhiskApi::createClient($config);
