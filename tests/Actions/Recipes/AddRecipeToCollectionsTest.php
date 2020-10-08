@@ -7,7 +7,6 @@ use ClickDs\WhiskApi\Tests\Support\MockResponses;
 use ClickDs\WhiskApi\WhiskApi;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
-use Illuminate\Support\Arr;
 use Mockery;
 
 /**
@@ -39,7 +38,7 @@ class AddRecipeToCollectionsTest extends BaseTestCase
 
         $this->assertNotEmpty($response);
         $this->assertEquals('whisk123', $response['id']);
-        $collectionIds = Arr::get($response, 'saved.collection_ids');
+        $collectionIds = $response['saved']['collection_ids'];
         $this->assertContains('collection1', $collectionIds);
         $this->assertContains('collection2', $collectionIds);
     }
