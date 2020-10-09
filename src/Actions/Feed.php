@@ -15,6 +15,6 @@ trait Feed
     {
         $uri = '/feed/v2/get';
 
-        return $this->get($uri, $queryParameters);
+        return $this->post($uri, $queryParameters);
     }
 }

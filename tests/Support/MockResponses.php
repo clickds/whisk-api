@@ -22,7 +22,7 @@ trait MockResponses
         $config = new Configuration([
             'api_token'     => 'abc',
             'token_type'    => $tokenType,
-            'handler_stack' => $handler,
+            'handler' => $handler,
         ]);
 
         return WhiskApi::createApiClient($config);

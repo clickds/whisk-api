@@ -43,7 +43,7 @@ class Configuration
 
     private function buildHandlerStack(array $parameters)
     {
-        $handlerStack = $this->fetchKeyFromArray($parameters, 'handler_stack', null);
+        $handlerStack = $this->fetchKeyFromArray($parameters, 'handler', null);
         if (is_null($handlerStack)) {
             return HandlerStack::create();
         }
