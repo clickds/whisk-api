@@ -29,18 +29,34 @@ trait MakesHttpRequests
 
     /**
      * @param string $uri
-     * @param array  $formParameters
+     * @param array  $parameters
      *
      * @return mixed
      */
-    public function post(string $uri, array $formParameters = [])
+    public function post(string $uri, array $parameters = [])
     {
         $payload = [];
-        if (!empty($formParameters)) {
-            $payload['form_params'] = $formParameters;
+        if (!empty($parameters)) {
+            $payload['form_params'] = $parameters;
         }
 
         return $this->request('POST', $uri, $payload);
+    }
+
+    /**
+     * @param string $uri
+     * @param array $parameters
+     *
+     * @return mixed
+     */
+    public function put(string $uri, array $parameters = [])
+    {
+        $payload = [];
+        if (!empty($parameters)) {
+            $payload['json'] = $parameters;
+        }
+
+        return $this->request('PUT', $uri, $payload);
     }
 
     /**
