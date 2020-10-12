@@ -19,7 +19,7 @@ class Configuration
     private HandlerStack $handlerStack;
 
     /**
-     * @param array{ base_uri: string, http_errors: bool, api_token: string, token_type: string, handler_stack: HandlerStack } $parameters
+     * @param array{ base_uri: string, http_errors: bool, api_token: string, token_type: string, handler: HandlerStack } $parameters
      */
     public function __construct(array $parameters = [])
     {
