@@ -17,7 +17,7 @@ trait Users
     }
 
     /**
-     * Update user settings
+     * Update user settings.
      *
      * @param array $parameters
      *

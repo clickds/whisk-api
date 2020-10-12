@@ -33,8 +33,8 @@ class UpdateSettingsTest extends BaseTestCase
                     'settings' => [
                         'personal_details' => [
                             'first_name' => 'Joe',
-                            'last_name' => 'Bloggs',
-                        ]
+                            'last_name'  => 'Bloggs',
+                        ],
                     ],
                 ],
             ])
@@ -45,8 +45,8 @@ class UpdateSettingsTest extends BaseTestCase
             'settings' => [
                 'personal_details' => [
                     'first_name' => 'Joe',
-                    'last_name' => 'Bloggs',
-                ]
+                    'last_name'  => 'Bloggs',
+                ],
             ],
         ]);
 
