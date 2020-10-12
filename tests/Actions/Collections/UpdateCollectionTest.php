@@ -23,7 +23,7 @@ class UpdateCollectionTest extends BaseTestCase
 
     public function test_guzzle_makes_correct_request(): void
     {
-        $uri = '/recipe/v2/collection/' . $id;
+        $uri = '/recipe/v2/collection/'.$id;
         $mock = Mockery::mock(Client::class);
         $mock->shouldReceive('request')->once()
             ->with('PUT', $uri, ['json' => ['name' => 'New name']])
@@ -41,11 +41,11 @@ class UpdateCollectionTest extends BaseTestCase
     private function responseBody(): string
     {
         return json_encode([
-            "collection" => [
-                "id" => "1",
-                "name" => "New name",
-                "recipes_count" => 0,
-            ]
+            'collection' => [
+                'id'            => '1',
+                'name'          => 'New name',
+                'recipes_count' => 0,
+            ],
         ]);
     }
 }
