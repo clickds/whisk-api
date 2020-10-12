@@ -61,6 +61,22 @@ trait MakesHttpRequests
 
     /**
      * @param string $uri
+     * @param array  $parameters
+     *
+     * @return mixed
+     */
+    public function patch(string $uri, array $parameters = [])
+    {
+        $payload = [];
+        if (!empty($parameters)) {
+            $payload['json'] = $parameters;
+        }
+
+        return $this->request('PATCH', $uri, $payload);
+    }
+
+    /**
+     * @param string $uri
      *
      * @return mixed
      */
