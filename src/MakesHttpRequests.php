@@ -37,7 +37,7 @@ trait MakesHttpRequests
     {
         $payload = [];
         if (!empty($parameters)) {
-            $payload['form_params'] = $parameters;
+            $payload['json'] = $parameters;
         }
 
         return $this->request('POST', $uri, $payload);
