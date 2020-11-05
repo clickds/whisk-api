@@ -27,7 +27,7 @@ class Configuration
         $tokenType = $this->fetchTokenType($parameters);
         $this->headers = $this->buildHeaders($apiToken, $tokenType);
         $this->baseUri = $this->fetchKeyFromArray($parameters, 'base_uri', 'https://graph.whisk.com');
-        $this->httpErrors = $this->fetchKeyFromArray($parameters, 'http_errors', false);
+        $this->httpErrors = $this->fetchKeyFromArray($parameters, 'http_errors', true);
         $this->handlerStack = $this->buildHandlerStack($parameters);
     }
 
