@@ -68,7 +68,10 @@ class TokenManager
             'form_params' => $data,
         ];
 
-        return $client->request('POST', $uri, $payload);
+        $response = $this->getHttpClient()->request($verb, $uri, $payload);        
+        $responseBody = (string) $response->getBody();
+
+        return json_decode($responseBody, true);
     }
 
     private function getHttpClient(): ClientInterface
