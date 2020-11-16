@@ -68,7 +68,7 @@ class TokenManager
             'form_params' => $data,
         ];
 
-        $response = $this->getHttpClient()->request($verb, $uri, $payload);
+        $response = $this->getHttpClient()->request('POST', $uri, $payload);
         $responseBody = (string) $response->getBody();
 
         return json_decode($responseBody, true);
