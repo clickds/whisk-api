@@ -57,7 +57,7 @@ class TokenManager
 
     /**
      * @param string $uri
-     * @param array $data
+     * @param array  $data
      *
      * @return mixed
      */
@@ -67,9 +67,10 @@ class TokenManager
         $payload = [
             'form_params' => $data,
         ];
+
         return $client->request('POST', $uri, $payload);
     }
-    
+
     private function getHttpClient(): ClientInterface
     {
         return $this->httpClient;
