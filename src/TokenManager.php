@@ -7,8 +7,6 @@ use GuzzleHttp\ClientInterface;
 
 class TokenManager
 {
-    use MakesHttpRequests;
-
     private string $clientId;
     private string $clientSecret;
     private ClientInterface $client;
@@ -57,6 +55,21 @@ class TokenManager
         ]);
     }
 
+    /**
+     * @param string $uri
+     * @param array $data
+     *
+     * @return mixed
+     */
+    private function post(string $uri, array $data)
+    {
+        $client = $this->getHttpClient();
+        $payload = [
+            'form_params' => $data,
+        ];
+        return $client->request('POST', $uri, $payload);
+    }
+    
     private function getHttpClient(): ClientInterface
     {
         return $this->httpClient;
