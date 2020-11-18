@@ -8,13 +8,13 @@ trait Recipes
      * Get a recipe.
      *
      * @param int|string $id
-     * @param array $args
+     * @param array      $args
      *
      * @return mixed
      */
     public function getRecipe($id, array $args = [])
     {
-        $uri = '/recipe/v2/' . $id;
+        $uri = '/recipe/v2/'.$id;
 
         return $this->get($uri, $args);
     }
@@ -62,7 +62,7 @@ trait Recipes
      */
     public function removeRecipeFromCollections(string $recipeId, array $collectionIds)
     {
-        $uri = '/recipe/v2/' . $recipeId;
+        $uri = '/recipe/v2/'.$recipeId;
         $parameters = [
             'collection_ids' => $collectionIds,
         ];
