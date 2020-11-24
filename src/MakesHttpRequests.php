@@ -12,8 +12,8 @@ trait MakesHttpRequests
     }
 
     /**
-     * @param string $uri
-     * @param array|string  $queryParameters
+     * @param string       $uri
+     * @param array|string $queryParameters
      *
      * @return mixed
      */
