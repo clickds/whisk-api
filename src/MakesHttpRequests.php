@@ -13,11 +13,11 @@ trait MakesHttpRequests
 
     /**
      * @param string $uri
-     * @param array  $queryParameters
+     * @param array|string  $queryParameters
      *
      * @return mixed
      */
-    public function get(string $uri, array $queryParameters = [])
+    public function get(string $uri, $queryParameters = [])
     {
         $payload = [];
         if (!empty($queryParameters)) {
