@@ -24,7 +24,7 @@ class GetRecipesInCollectionTest extends BaseTestCase
     public function test_guzzle_makes_correct_request(): void
     {
         $id = 'abc123';
-        $uri = '/collection/v2/' . $id . '/recipe';
+        $uri = '/collection/v2/'.$id.'/recipe';
         $mock = Mockery::mock(Client::class);
         $mock->shouldReceive('request')->once()
             ->with('GET', $uri)
@@ -40,7 +40,7 @@ class GetRecipesInCollectionTest extends BaseTestCase
     public function test_when_passing_limit(): void
     {
         $id = 'abc123';
-        $uri = '/collection/v2/' . $id . '/recipe';
+        $uri = '/collection/v2/'.$id.'/recipe';
         $mock = Mockery::mock(Client::class);
         $mock->shouldReceive('request')->once()
             ->with('GET', $uri, ['query' => ['paging.limit' => 500]])
