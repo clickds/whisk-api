@@ -43,11 +43,11 @@ class GetRecipesInCollectionTest extends BaseTestCase
         $uri = '/collection/v2/'.$id.'/recipe';
         $mock = Mockery::mock(Client::class);
         $mock->shouldReceive('request')->once()
-            ->with('GET', $uri, ['query' => ['limit' => 500]])
+            ->with('GET', $uri, ['query' => ['paging' => ['limit' => 500]]])
             ->andReturn(new Response(200, [], $this->responseBody()));
         $client = new WhiskApi($mock);
 
-        $response = $client->getRecipesInCollection($id, ['limit' => 500]);
+        $response = $client->getRecipesInCollection($id, ['paging' => ['limit' => 500]]);
 
         $this->assertNotEmpty($response);
         $this->assertArrayHasKey('recipes', $response);
