@@ -38,7 +38,7 @@ class SearchRecipesTest extends BaseTestCase
         $uri = '/recipe/v2/search';
         $mock = Mockery::mock(Client::class);
         $mock->shouldReceive('request')->once()->with('POST', $uri, [
-            'form_params' => [
+            'json' => [
                 'query' => 'abc',
             ],
         ])

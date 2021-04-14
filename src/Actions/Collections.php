@@ -28,7 +28,7 @@ trait Collections
      */
     public function updateCollection($id, array $parameters = [])
     {
-        $uri = '/recipe/v2/collection/'.$id;
+        $uri = '/recipe/v2/collection/' . $id;
 
         return $this->put($uri, $parameters);
     }
@@ -42,7 +42,7 @@ trait Collections
      */
     public function deleteCollection($id)
     {
-        $uri = '/collection/v2/'.$id;
+        $uri = '/collection/v2/' . $id;
 
         return $this->delete($uri);
     }
@@ -51,13 +51,14 @@ trait Collections
      * Get recipes in a collection.
      *
      * @param int|string $id
+     * @param array $parameters
      *
      * @return mixed
      */
-    public function getRecipesInCollection($id)
+    public function getRecipesInCollection($id, array $parameters = [])
     {
-        $uri = '/collection/v2/'.$id.'/recipe';
+        $uri = '/collection/v2/' . $id . '/recipe';
 
-        return $this->get($uri);
+        return $this->get($uri, $parameters);
     }
 }

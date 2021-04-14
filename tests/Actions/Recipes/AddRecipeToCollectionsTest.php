@@ -30,7 +30,7 @@ class AddRecipeToCollectionsTest extends BaseTestCase
             'collection_ids' => ['collection1', 'collection2'],
         ];
         $mock->shouldReceive('request')->once()
-            ->with('POST', $uri, ['form_params' => $parameters])
+            ->with('POST', $uri, ['json' => $parameters])
             ->andReturn(new Response(200, [], $this->responseBody()));
         $client = new WhiskApi($mock);
 

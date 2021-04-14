@@ -27,7 +27,7 @@ class CreateCollectionTest extends BaseTestCase
         $mock = Mockery::mock(Client::class);
         $parameters = ['name' => 'My collection'];
         $mock->shouldReceive('request')->once()
-            ->with('POST', $uri, ['form_params' => $parameters])
+            ->with('POST', $uri, ['json' => $parameters])
             ->andReturn(new Response(200, [], $this->responseBody()));
         $client = new WhiskApi($mock);
 

@@ -57,7 +57,7 @@ class GetFeedTest extends BaseTestCase
         $mock = Mockery::mock(Client::class);
         $queryParameters = ['id' => $id];
         $mock->shouldReceive('request')->once()
-            ->with('POST', $uri, ['form_params' => $queryParameters])
+            ->with('POST', $uri, ['json' => $queryParameters])
             ->andReturn(new Response());
         $client = new WhiskApi($mock);
 
