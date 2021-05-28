@@ -21,13 +21,13 @@ trait Recipes
         // This forces the format whisk uses.
         foreach ($args as $key => $value) {
             if (is_array($value)) {
-                $separator = '&' . $key . '=';
+                $separator = '&'.$key.'=';
                 $args[$key] = implode($separator, $value);
             }
         }
-        $queryString = 'id=' . $id;
+        $queryString = 'id='.$id;
         foreach ($args as $key => $value) {
-            $queryString .= '&' . $key . '=' . $value;
+            $queryString .= '&'.$key.'='.$value;
         }
 
         return $this->get($uri, $queryString);
@@ -76,7 +76,7 @@ trait Recipes
      */
     public function removeRecipeFromCollections(string $recipeId, array $collectionIds)
     {
-        $uri = '/recipe/v2/' . $recipeId;
+        $uri = '/recipe/v2/'.$recipeId;
         $parameters = [
             'collection_ids' => $collectionIds,
         ];
