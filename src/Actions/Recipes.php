@@ -14,13 +14,23 @@ trait Recipes
      */
     public function getRecipe($id, $args = [])
     {
-        if (filter_var($id, FILTER_VALIDATE_URL) === FALSE) {
-            $uri = '/recipe/v2/get?id=' . $id;
-        } else {
-            $uri = '/recipe/v2/get?id=' . $id;
+        $uri = '/recipe/v2/get';
+
+        // Guzzle will set array parameters in a query string like fields[]=
+        // but Whisk only works with them like fields=1&fields=2
+        // This forces the format whisk uses.
+        foreach ($args as $key => $value) {
+            if (is_array($value)) {
+                $separator = '&' . $key . '=';
+                $args[$key] = implode($separator, $value);
+            }
+        }
+        $queryString = 'id=' . $id;
+        foreach ($args as $key => $value) {
+            $queryString .= '&' . $key . '=' . $value;
         }
 
-        return $this->get($uri, $args);
+        return $this->get($uri, $queryString);
     }
 
     /**
