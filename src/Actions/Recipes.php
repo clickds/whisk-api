@@ -14,7 +14,11 @@ trait Recipes
      */
     public function getRecipe($id, $args = [])
     {
-        $uri = '/recipe/v2/'.$id;
+        if (filter_var($id, FILTER_VALIDATE_URL) === FALSE) {
+            $uri = '/recipe/v2/get?id=' . $id;
+        } else {
+            $uri = '/recipe/v2/get?id=' . $id;
+        }
 
         return $this->get($uri, $args);
     }
@@ -62,7 +66,7 @@ trait Recipes
      */
     public function removeRecipeFromCollections(string $recipeId, array $collectionIds)
     {
-        $uri = '/recipe/v2/'.$recipeId;
+        $uri = '/recipe/v2/' . $recipeId;
         $parameters = [
             'collection_ids' => $collectionIds,
         ];
