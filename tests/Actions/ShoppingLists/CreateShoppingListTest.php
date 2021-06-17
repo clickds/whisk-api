@@ -1,6 +1,6 @@
 <?php
 
-namespace ClickDs\WhiskApi\Tests\Actions\Collections;
+namespace ClickDs\WhiskApi\Tests\Actions\ShoppingLists;
 
 use ClickDs\WhiskApi\Tests\BaseTestCase;
 use ClickDs\WhiskApi\Tests\Support\MockResponses;
@@ -10,9 +10,9 @@ use GuzzleHttp\Psr7\Response;
 use Mockery;
 
 /**
- * @group Collections
+ * @group ShoppingLists
  */
-class UpdateCollectionTest extends BaseTestCase
+class CreateShoppingListTest extends BaseTestCase
 {
     use MockResponses;
 
@@ -23,30 +23,25 @@ class UpdateCollectionTest extends BaseTestCase
 
     public function test_guzzle_makes_correct_request(): void
     {
-        $id = 'whiskabc123';
-        $uri = '/recipe/v2/collection/'.$id;
+        $uri = '/list/v2';
+        $params = [
+            'name' => 'My Shopping List',
+        ];
         $mock = Mockery::mock(Client::class);
         $mock->shouldReceive('request')->once()
-            ->with('PUT', $uri, ['json' => ['name' => 'New name']])
+            ->with('POST', $uri, ['json' => $params])
             ->andReturn(new Response(200, [], $this->responseBody()));
         $client = new WhiskApi($mock);
 
-        $response = $client->updateCollection($id, [
-            'name' => 'New name',
-        ]);
+        $response = $client->createShoppingList($params);
 
         $this->assertNotEmpty($response);
-        $this->assertEquals('New name', $response['collection']['name']);
+        $this->assertArrayHasKey('name', $response);
+        $this->assertEquals($response['name'], 'My Shopping List');
     }
 
     private function responseBody(): string
     {
-        return json_encode([
-            'collection' => [
-                'id'            => '1',
-                'name'          => 'New name',
-                'recipes_count' => 0,
-            ],
-        ]);
+        return $this->getSupportJson('create-shopping-list.json');
     }
 }

@@ -1,0 +1,13 @@
+{
+  "items": [
+    {
+      "list": {
+        "id": "string",
+        "name": "string",
+        "primary": true
+      },
+      "item_count": 0,
+      "grouped_item_count": 0
+    }
+  ]
+}
