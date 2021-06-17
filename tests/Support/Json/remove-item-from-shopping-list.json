@@ -1,0 +1,119 @@
+{
+  "list": {
+    "id": "string",
+    "name": "string",
+    "primary": true
+  },
+  "content": {
+    "items": [
+      {
+        "id": "string",
+        "item": {
+          "name": "string",
+          "brand": "string",
+          "comment": "string",
+          "quantity": 0,
+          "unit": "string"
+        },
+        "checked": true,
+        "image_url": "string",
+        "analysis": {
+          "product": {
+            "canonical_name": "string",
+            "original_name": "string"
+          },
+          "category": {
+            "canonical_name": "string"
+          },
+          "brand": {
+            "canonical_name": "string"
+          }
+        },
+        "recipe": {
+          "recipe_id": "string",
+          "position": 0
+        },
+        "combined": {
+          "combined_item_id": "string",
+          "quantity": 0
+        },
+        "created_time": "string",
+        "updated_at": "string",
+        "matching_properties": {
+          "gtin": "string",
+          "custom_product_id": "string"
+        }
+      }
+    ],
+    "combined_items": [
+      {
+        "id": "string",
+        "item": {
+          "name": "string",
+          "brand": "string",
+          "comment": "string",
+          "quantity": 0,
+          "unit": "string"
+        },
+        "checked": true,
+        "image_url": "string",
+        "analysis": {
+          "product": {
+            "canonical_name": "string",
+            "original_name": "string"
+          },
+          "category": {
+            "canonical_name": "string"
+          },
+          "brand": {
+            "canonical_name": "string"
+          }
+        },
+        "created_time": "string",
+        "updated_at": "string"
+      }
+    ],
+    "recipes": [
+      {
+        "id": "string",
+        "name": "string",
+        "images": [
+          {
+            "responsive": {
+              "url": "string",
+              "width": 0,
+              "height": 0,
+              "selection": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              }
+            },
+            "url": "string"
+          }
+        ],
+        "source": {
+          "name": "string",
+          "display_name": "string",
+          "source_recipe_url": "string",
+          "image": {
+            "responsive": {
+              "url": "string",
+              "width": 0,
+              "height": 0,
+              "selection": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              }
+            },
+            "url": "string"
+          },
+          "license": "LICENCE_INVALID"
+        }
+      }
+    ]
+  }
+}
