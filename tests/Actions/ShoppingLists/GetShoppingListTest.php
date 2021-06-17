@@ -24,7 +24,7 @@ class GetShoppingListTest extends BaseTestCase
     public function test_guzzle_makes_correct_request(): void
     {
         $id = 'whisk-shopping-list';
-        $uri = '/list/v2' . '/' . $id;
+        $uri = '/list/v2'.'/'.$id;
         $mock = Mockery::mock(Client::class);
         $mock->shouldReceive('request')->once()
             ->with('GET', $uri)

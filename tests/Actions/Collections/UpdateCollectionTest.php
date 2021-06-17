@@ -24,7 +24,7 @@ class UpdateCollectionTest extends BaseTestCase
     public function test_guzzle_makes_correct_request(): void
     {
         $id = 'whiskabc123';
-        $uri = '/recipe/v2/collection/' . $id;
+        $uri = '/recipe/v2/collection/'.$id;
         $mock = Mockery::mock(Client::class);
         $mock->shouldReceive('request')->once()
             ->with('PUT', $uri, ['json' => ['name' => 'New name']])
