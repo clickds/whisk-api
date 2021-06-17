@@ -25,7 +25,7 @@ class RemoveItemFromShoppingListTest extends BaseTestCase
     {
         $listId = 'shopping-list';
         $itemId = 'abc123';
-        $uri = '/list/v2/' . $listId . '/item/' . $itemId;
+        $uri = '/list/v2/'.$listId.'/item/'.$itemId;
         $mock = Mockery::mock(Client::class);
         $mock->shouldReceive('request')->once()
             ->with('DELETE', $uri)

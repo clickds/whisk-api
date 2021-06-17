@@ -24,7 +24,7 @@ class ClearItemsFromShoppingListTest extends BaseTestCase
     public function test_guzzle_makes_correct_request(): void
     {
         $listId = 'shopping-list';
-        $uri = '/list/v2/' . $listId . '/item';
+        $uri = '/list/v2/'.$listId.'/item';
         $mock = Mockery::mock(Client::class);
         $mock->shouldReceive('request')->once()
             ->with('DELETE', $uri, ['json' => ['only_checked' => false]])

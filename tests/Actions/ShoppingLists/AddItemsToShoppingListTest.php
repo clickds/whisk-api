@@ -24,13 +24,13 @@ class AddItemsToShoppingListTest extends BaseTestCase
     public function test_guzzle_makes_correct_request(): void
     {
         $listId = 'shopping-list';
-        $uri = '/list/v2/' . $listId . '/item';
+        $uri = '/list/v2/'.$listId.'/item';
         $params = [
             'recipes' => [
                 [
-                    'recipe_id' => '10745889d4a1c0f4b8dbfab66bffa433524'
+                    'recipe_id' => '10745889d4a1c0f4b8dbfab66bffa433524',
                 ],
-            ]
+            ],
         ];
         $mock = Mockery::mock(Client::class);
         $mock->shouldReceive('request')->once()
