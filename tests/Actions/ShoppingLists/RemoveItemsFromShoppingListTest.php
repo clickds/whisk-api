@@ -24,13 +24,13 @@ class RemoveItemsFromShoppingListTest extends BaseTestCase
     public function test_guzzle_makes_correct_request(): void
     {
         $listId = 'shopping-list';
-        $uri = '/list/v2/' . $listId . '/items';
+        $uri = '/list/v2/'.$listId.'/items';
         $itemId = 'abc';
         $params = [
-            'list_id' => $listId,
+            'list_id'  => $listId,
             'item_ids' => [
                 $itemId,
-            ]
+            ],
         ];
         $mock = Mockery::mock(Client::class);
         $mock->shouldReceive('request')->once()
