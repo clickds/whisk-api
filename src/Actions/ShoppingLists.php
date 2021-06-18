@@ -23,7 +23,7 @@ trait ShoppingLists
      */
     public function getShoppingList($id)
     {
-        $uri = '/list/v2/' . $id;
+        $uri = '/list/v2/'.$id;
 
         return $this->get($uri);
     }
@@ -47,7 +47,7 @@ trait ShoppingLists
      */
     public function addItemsToShoppingList(string $id, array $params)
     {
-        $uri = '/list/v2/' . $id . '/item';
+        $uri = '/list/v2/'.$id.'/item';
 
         return $this->put($uri, $params);
     }
@@ -59,22 +59,22 @@ trait ShoppingLists
      */
     public function removeItemFromShoppingList(string $listId, string $itemId)
     {
-        $uri = '/list/v2/' . $listId . '/item/' . $itemId;
+        $uri = '/list/v2/'.$listId.'/item/'.$itemId;
 
         return $this->delete($uri);
     }
 
     /**
-     * Remove Items from Shopping List
+     * Remove Items from Shopping List.
      *
      * @return mixed
      */
     public function removeItemsFromShoppingList(string $listId, array $itemIds)
     {
-        $uri = '/list/v2/' . $listId . '/items';
+        $uri = '/list/v2/'.$listId.'/items';
 
         $params = [
-            'list_id' => $listId,
+            'list_id'  => $listId,
             'item_ids' => $itemIds,
         ];
 
@@ -88,7 +88,7 @@ trait ShoppingLists
      */
     public function clearItemsFromShoppingList(string $listId)
     {
-        $uri = '/list/v2/' . $listId . '/item';
+        $uri = '/list/v2/'.$listId.'/item';
         $params = [
             'only_checked' => false,
         ];
