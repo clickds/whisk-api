@@ -27,9 +27,9 @@ class ConvertToShoppingBasketTest extends BaseTestCase
         $params = [
             'items' => [
                 [
-                    'name' => 'milk',
+                    'name'     => 'milk',
                     'quantity' => 250,
-                    'unit' => 'ml',
+                    'unit'     => 'ml',
                 ],
             ],
         ];
@@ -48,7 +48,7 @@ class ConvertToShoppingBasketTest extends BaseTestCase
     private function responseBody(): string
     {
         return json_encode([
-            'landingUrl' => "https://graph.whisk.com/v1/lists/transfers/9e107d15377f484eb7c343f93028b936/landing"
+            'landingUrl' => 'https://graph.whisk.com/v1/lists/transfers/9e107d15377f484eb7c343f93028b936/landing',
         ]);
     }
 }

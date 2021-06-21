@@ -5,7 +5,7 @@ namespace ClickDs\WhiskApi\Actions;
 trait ShoppingBasket
 {
     /**
-     * Convert To Basket
+     * Convert To Basket.
      *
      * @return mixed
      */
