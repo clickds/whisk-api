@@ -5,6 +5,7 @@ namespace ClickDs\WhiskApi;
 use ClickDs\WhiskApi\Actions\Collections;
 use ClickDs\WhiskApi\Actions\Feed;
 use ClickDs\WhiskApi\Actions\Recipes;
+use ClickDs\WhiskApi\Actions\ShoppingBasket;
 use ClickDs\WhiskApi\Actions\ShoppingLists;
 use ClickDs\WhiskApi\Actions\Users;
 use GuzzleHttp\Client as HttpClient;
@@ -15,6 +16,7 @@ class WhiskApi
     use Collections;
     use Feed;
     use Recipes;
+    use ShoppingBasket;
     use ShoppingLists;
     use Users;
 
