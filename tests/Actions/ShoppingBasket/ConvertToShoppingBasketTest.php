@@ -23,7 +23,7 @@ class ConvertToShoppingBasketTest extends BaseTestCase
 
     public function test_guzzle_makes_correct_request(): void
     {
-        $uri = '/v1/lists/transfers';
+        $uri = 'https://graph.whisk.com/v1/lists/transfers';
         $params = [
             'items' => [
                 [

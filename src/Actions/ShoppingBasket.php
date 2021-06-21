@@ -11,7 +11,7 @@ trait ShoppingBasket
      */
     public function convertToShoppingBasket(array $params)
     {
-        $uri = '/v1/lists/transfers';
+        $uri = 'https://graph.whisk.com/v1/lists/transfers';
 
         return $this->post($uri, $params);
     }
